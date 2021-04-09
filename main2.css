@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS for the header: logo, heading, navigation  */
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60px;
+    background-color: gray;
+    
+}
+
+.nav-links-container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+
+.nav-links-container a {
+    margin: 0 15px 0 0;
+    text-decoration: none;
+    color: black;
+}
+/*  */
+
+
+/* CSS for footer */
+.nav-bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 60px;
+    background-color: gray;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bottom ul{
+    display: flex;
+    list-style-type: none;
+}
+.nav-bottom ul li a{ 
+    text-decoration: none;
+    margin: 0 15px 0 0;
+    color: black;
+    text-transform: uppercase;
+}
+
+#fee_table{
+    border: 1px solid black;
+    background-color: #f1f1c1;
+    margin: 20px 20px;
+}
+th, td {
+    padding: 15px;
+    border: 1px solid black
+}
+.title{
+    margin: 20px 20px;
+}
+
+#faqs{
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+#faqs ul li{
+    padding: 10px;
+    text-decoration: none;
+    list-style-type: square;
+}
+
+#faqs ul li ul{
+    display:none;
+}
+#faqs ul li:hover ul{
+    display:block;
+}
+
+#faqs ul li ul li{
+    list-style: circle;
+    background-color: lightgray;
+    font-style: italic;
+    font-size-adjust: inherit;
+    padding-left: 20px;
+}
+/*  */
