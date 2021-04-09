@@ -71,12 +71,15 @@ th, td {
 #faqs ul li{
     padding: 10px;
     text-decoration: none;
-    list-style-type: square;
+    list-style: square;
 }
+
 
 #faqs ul li ul{
     display:none;
 }
+
+
 #faqs ul li:hover ul{
     display:block;
 }
@@ -87,5 +90,11 @@ th, td {
     font-style: italic;
     font-size-adjust: inherit;
     padding-left: 20px;
+    
 }
+#faqs ul li ul li ul li {
+    margin-left: 50px;
+    list-style:decimal;
+}
+
 /*  */
