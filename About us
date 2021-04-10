@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="main2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Mall Logo" width="125px" class="logo2">
+            </div>
+            <div class="nav-text">
+                <h1> MALL CENTER</h1>
+            </div>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index2.html">Home</a></li>
+                    <li><a href="About us.html">About Us</a></li>
+                    <li><a href="fee_table.html">Fees</a></li>
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Browse</a></li>
+                    <li><a href=faqs.html"">FAQs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <body>
+        <div class="member">
+            <div>
+                <img src="" alt="Thong's photo">
+            </div>
+            <div>
+                <div class="personal_info">Student ID: </div>
+                <div class="personal_info">Name: Nguyen Hoang Minh Thong </div>
+                <div class="personal_info">Email: </div>
+                <div class="personal_info">Phone:</div>
+            </div>
+        </div>
+        <div class="member">
+            <div>
+                <img src="" alt="Van's photo">
+            </div>
+            <div>
+                <div class="personal_info">Student ID: </div>
+                <div class="personal_info">Name: Tran Thien Van</div>
+                <div class="personal_info">Email:</div>
+                <div class="personal_info">Phone:</div>
+            </div>
+        </div>
+        <div class="member">
+            <div>
+                <img src="images/Nhan's photo.jpg" alt="Nhan's photo" width="150px" height="200px">
+            </div>
+            <div>
+                <div class="personal_info">Student ID: S3877788</div>
+                <div class="personal_info">Name: Nguyen Vo Thien Nhan</div>
+                <div class="personal_info">Email: S3877788@rmit.edu.vn</div>
+                <div class="personal_info">Phone: 0949366602</div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="nav-bottom">
+            <ul>
+                <li><a href="coppyright.html">Coppyright</a></li>
+                <li><a href="term of service.html">Term of Service</a></li>
+                <li><a href="privacy policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
