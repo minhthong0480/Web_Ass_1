@@ -53,7 +53,7 @@ nav{
 #fee_table{
     border: 1px solid black;
     background-color: #f1f1c1;
-    margin: 20px 30px;
+    margin: 50px auto;
 }
 th, td {
     padding: 15px;
@@ -64,7 +64,7 @@ th, td {
 }
 
 #faqs{
-    margin-left: 30px;
+    margin-left: 50px;
     margin-bottom: 30px;
 }
 
@@ -87,7 +87,7 @@ th, td {
 }
 
 #faqs ul li ul li ul li {
-    margin-left: 50px;
+    margin-left: auto;
     list-style:decimal;
 }
 
@@ -97,6 +97,67 @@ th, td {
 }
 
 #contact_us{
-    margin:0px 30px
+    margin:50px auto;
+    width: 80%;
 }
-/*  */
+
+.submit_button{
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.contact_box{
+    border-style: ridge;
+    background: gray;
+    padding: 20px;
+    margin-right: 200px;
+}
+
+.contact_box {flex-basis: 45%;}
+
+.enter_name input {
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 5px;
+}
+.phone input {
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 5px;
+}
+.email input {
+    width: 30%;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    padding: 5px;
+}
+
+.enter_name{margin-bottom: 10px;}
+.phone{margin-bottom: 10px;}
+.email{margin-bottom: 10px;}
+.contact_method{margin-bottom: 10px;}
+.contact_purpose{margin-bottom: 10px;}
+.contact_day{margin-bottom: 10px;}
+
+.message{
+    width: 100%;
+    outline:none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    color: orange;
+}
+.submit_button{
+    background-color: gray;
+    border: none;
+    outline:none;
+    width: 10%;
+    margin-top: 20px;
+}
