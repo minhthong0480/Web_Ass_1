@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="main2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Mall Logo" width="125px" class="logo2">
+            </div>
+            <div class="nav-text">
+                <h1> MALL CENTER</h1>
+            </div>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About_us.html">About Us</a></li>
+                    <li><a href="fee_table.html">Fees</a></li>
+                    <li><a href="">My Account</a></li>
+                    <li><a href="">Browse</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="contact_us">
+        <h2>Contact Us</h2>
+        <form method="get" action="index.html">
+        <label for="purpose">Purpose of Contact</label>
+        <select name="purpose" id="purpose">
+            <option value="selected">Please select</option>
+            <option value="Business">Business</option>
+            <option value="Personal">Personal</option>
+        </select>
+        <input type="submit" value="Submit"> <br>
+
+
+        <label for="your_name">Enter your name</label>
+        <input type="text" name="your_name" id="your_name" maxlength="50">
+        <input type="submit" ><br>
+    
+
+        <label for="contact">Choose how to contact</label>
+        <input type="radio" name="method of contact" value="Phone">Phone
+        <input type="radio" name="method of contact" value="Email">Email
+        <input type="submit" ><br>
+        
+
+        <label for="email">Enter your email here: </label>
+        <input type="email" name="your_email" id="email" placeholder="Email" autocomplete='off'>
+        <input type="submit"><br>
+
+
+        <label for="phone">Enter your phone here</label>
+        <input type="tel" name="your_phone" id="phone" placeholder='Phone'>
+        <input type="submit"><br>
+
+
+        <label for="contact_day">Choose day(s) to contact</label>
+        <input type="checkbox" name="contact_day" value="Monday">Monday
+        <input type="checkbox" name="contact_day" value="Tuesday">Tuesday
+        <input type="checkbox" name="contact_day" value="Wednesday">Wednesday
+        <input type="checkbox" name="contact_day" value="Thursday">Thursday
+        <input type="checkbox" name="contact_day" value="Friday">Friday
+        <input type="checkbox" name="contact_day" value="Saturday">Saturday
+        <input type="checkbox" name="contact_day" value="Sunday">Sunday
+        <input type="submit"><br>
+
+
+        <label for="message">Message</label><br>
+        <textarea name="message" id="message" cols="70" rows="10"></textarea><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </div>
+
+    <footer>
+        <div class="nav-bottom">
+            <ul>
+                <li><a href="">Copyright</a></li>
+                <li><a href="">Term of Service</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
