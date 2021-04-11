@@ -74,27 +74,26 @@ th, td {
     list-style: square;
 }
 
-
-#faqs ul li ul{
-    display:none;
-}
-
-
-#faqs ul li:hover ul{
-    display:block;
-}
-
 #faqs ul li ul li{
     list-style: circle;
     background-color: lightgray;
     font-style: italic;
     font-size-adjust: inherit;
-    padding-left: 20px;
-    
+    padding-left: 20px;   
 }
+
+.wrapper{
+    display: none;
+}
+
 #faqs ul li ul li ul li {
     margin-left: 50px;
     list-style:decimal;
+}
+
+.dropdown:hover .wrapper,
+.dropdown:focus-within .wrapper{
+    display:block;
 }
 
 /*  */
