@@ -162,3 +162,36 @@ label {
     margin-top: 20px;
 }
 
+.form_box{
+    width: 380px;
+    height: 380px;
+    position:relative;
+    margin: 6% auto;
+    padding:5px;
+    background: gray;
+}
+.login form{
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.login h2{
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.login_button input{
+    width: 100%;
+}
+
+.username{
+    margin:10px auto;
+    
+}
+
+.password{
+    margin:10px auto;
+    
+}
+

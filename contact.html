@@ -34,22 +34,22 @@
     <div id="contact_us">
         <h2>Contact Us</h2>
         <p>Feel free to contact us if you have any problems</p>
-        <form method="get" action=index.tml>
+        <form method="GET">
             <div class="contact_box">
                 <div class="input_box_1">
                     <div class="enter_name">
-                        <label for="your_name">Enter your name:</label>
-                        <input type="text" name="your_name" id="your_name" maxlength="100" placeholder="John Smith">
+                        <label for="your_name" >Enter your name:</label>
+                        <input type="text" name="your_name" id="your_name" maxlength="100" placeholder="John Smith" required>
                         <br>
                     </div>
                     <div class="phone">
                         <label for="phone">Enter your phone here: </label>
-                        <input type="tel" name="your_phone" id="phone" placeholder='090-123-4567'>
+                        <input type="tel" name="your_phone" id="phone" placeholder='090-123-4567' required>
                         <br>
                     </div>
                     <div class="email">
                         <label for="email">Enter your email here: </label>
-                        <input type="email" name="your_email" id="email" placeholder="contactus@example.com" autocomplete='off'>
+                        <input type="email" name="your_email" id="email" placeholder="contactus@example.com" autocomplete='off' required>
                         <br>
                     </div>
                 </div>
