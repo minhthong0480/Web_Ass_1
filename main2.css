@@ -151,7 +151,7 @@ th, td {
     box-sizing: border-box;
 }
 
-label {
+#contact_us label {
     color:orangered;
 }
 .submit_button{
@@ -163,35 +163,56 @@ label {
 }
 
 .form_box{
-    width: 380px;
-    height: 380px;
-    position:relative;
+    width: 320px;
+    height: 420px;
     margin: 6% auto;
     padding:5px;
     background: gray;
 }
 .login form{
-    margin-top: 20px;
+    margin-top: 0%;
     margin-left: auto;
+    font-weight: bold;
+    color: orangered;
 }
 
 .login h2{
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 0%;
+    
 }
 
 
 .login_button input{
     width: 100%;
+    border:none;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 .username{
     margin:10px auto;
-    
+    margin-left: 50px;
 }
 
 .password{
     margin:10px auto;
-    
+    margin-left: 50px;
 }
 
+
+.form_box input[type="text"], input[type="password"]{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid;
+    outline:none;
+}
+
+.form_box a{
+    text-decoration: none;
+    font-size: 12px;
+    
+}
