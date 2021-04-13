@@ -108,7 +108,7 @@ th, td {
 
 .contact_box{
     border-style: ridge;
-    background: gray;
+    
     padding: 20px;
     margin-right: 200px;
 }
@@ -152,12 +152,13 @@ th, td {
 }
 
 label {
-    color: orange;
+    color:orangered;
 }
 .submit_button{
     background-color: gray;
     border: none;
     outline:none;
-    width: 10%;
+    width: auto;
     margin-top: 20px;
 }
+
