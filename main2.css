@@ -242,10 +242,11 @@ th, td {
 }
 
 .forgotpass .fpass{
-    background: #fff;
+    background: darkgray;
     width: 40%;
     padding: 15px 20px;
     border: solid;
+    border-radius: 10px;
 }
 
 .fpass_h2{
@@ -254,7 +255,9 @@ th, td {
     padding: 0px;
 }
 
-.fpass .fpass_box {}
+.fpass h3{
+    color:orangered;
+}
 
 .fpass .fpass_box input[type="text"]{
     padding:5px;
@@ -274,7 +277,7 @@ th, td {
 }
 
 .fpass_button input[type="submit"]:hover{
-    background-color: gray;
+    background-color: lightsalmon;
 }
 
 /*  */
