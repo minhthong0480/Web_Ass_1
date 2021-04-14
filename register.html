@@ -31,30 +31,30 @@
         </nav>
     </header>
 
-    <div class="login">
-        <h2>Log In Here</h2>
-        <div class="form_box">
-            <form method="POST">
-                <div class="username">
-                    <p>Username</p>
-                    <input type="text" required placeholder="Phone or Email">
-                </div>
-                <div class="password">
-                    <p>Password</p>
-                    <input type="password" required placeholder="Enter Password">
-                    
-                </div>
-                <div class="login_button">
-                    <input type="submit" value="Log In">
-                </div>
-                <div>
-                    <a href="forgot_pass.html">Forgot Password?</a>
-                </div>
-                <div class="signup">
-                    <a href="register.html">Register Account</a>
-                </div>
-            </form>
-        </div>  
+    <div class="register">
+        <h2>Register Form</h2>
+        <form method="post">
+            <div class="regis_phone">
+                <label for="phone">Enter your phone here: </label>
+                <input type="tel" name="your_phone" id="phone" placeholder='090-123-4567' required>
+                <br>
+            </div>
+            <div class="regis_email">
+                <label for="email">Enter your email here: </label>
+                <input type="email" name="your_email" id="email" placeholder="contactus@example.com" autocomplete='off' required>
+                <br>
+            </div>
+            <div class="regis_password">
+                <label for="password" >Enter your password:</label>
+                <input type="text" name="password" id="your_password" maxlength="100" placeholder="Password" required>
+                <br>
+            </div>
+            <div class="regis_retype_password">
+                <label for="password" >Enter your password:</label>
+                <input type="text" name="password" id="your_password" maxlength="100" placeholder="Password" required>
+                <br>
+            </div>
+        </form>
     </div>
 
     <footer>
