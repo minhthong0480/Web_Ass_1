@@ -32,7 +32,8 @@
     </header>
 
     <div class="register">
-        <h2>Register Form</h2>
+        <div class="title">Register Your Account</div>
+        <div id="register_form">
         <form method="post">
             <div class="regis_phone">
                 <label for="phone">Enter your phone here: </label>
@@ -55,7 +56,7 @@
                 <br>
             </div>
             <div class="profile_picture">
-                <p class="choose_profile">Choose your profile picture: </p>
+                <label class="choose_profile">Choose your profile picture: </label>
                 <img class="profile-pic" src="images/blank-profile-picture-973460_640.png">
                 <br>
             </div>
@@ -100,18 +101,15 @@
                         <option value="FR">France</option>
                     </select>
                     <br>
-                </form>
-                    
+                </form> 
             </div>
             <div class="account_type">
-                    <p>Choose Your Type of Account: </p>
-                    <input type="radio" name="type of account" id="store_owner"/>
-                    <label for="store_owner">Store Owner</label>
+                <label>Choose Your Type of Account: </label>
+                <input type="radio" name="type_of_account" id="store_owner"/>
+                <label for="storeowner">Store Owner</label>
                      
-                    <input type="radio" name="type of account" id="shopper"/>
-                    <label for="shopper">Shopper</label>
-                    
-                    <br>
+                <input type="radio" name="type_of_account" id="shopper"/>
+                <label for="shopper">Shopper</label>    
             </div>
             <div id="store_owner_account_field">
                 <div class="business_name">
@@ -143,11 +141,12 @@
                     </form>
                 </div>
             </div>
-            <div>
-                <input type="submit" value="Send" class="submit_button">
-                <input type="reset" value="Reset" class="submit_button">
+            <div class="regis_button">
+                <input type="submit" value="Send">
+                <input type="reset" value="Reset">
             </div>
         </form>
+        </div>
     </div>
 
     <footer>

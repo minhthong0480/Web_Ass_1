@@ -340,12 +340,53 @@ th, td {
     display: block;
 }
 
+.register{
+    
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.title {
+    text-align: center;
+    
+}
+
+label{
+    padding: 10px;
+    font-weight: 200px;
+    font-style: italic;
+}
+
+#register_form{
+    border: 1px solid;
+    width: fit-content;
+    margin-left: 30%;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.regis_button{
+    justify-items: center;
+}
+
+input{
+    padding:5px 30px;
+    margin: 10px;
+    align-self: left;
+    border-radius: 5px;
+}
+
+.profile-pic{
+    padding:10px;
+    margin-left: 100px;
+}
+
 #store_owner_account_field{
-    display: none;
+    display:none;
+    height: max-content;
 }
 
 #store_owner:checked ~ #store_owner_account_field{
     display: block;
 }
-
 /*  */
