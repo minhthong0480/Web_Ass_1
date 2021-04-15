@@ -64,10 +64,23 @@ th, td {
 .title{
     margin: 20px 20px;
 }
+.parafee{
+    margin-left:50px;
+}
+/*  */
 
+/* faqs */
 #faqs{
     margin-left: 50px;
     margin-bottom: 30px;
+}
+
+.title{
+    text-align: center;
+}
+
+.parafaq {
+    margin-left:50px;
 }
 
 #faqs ul li{
@@ -105,14 +118,17 @@ th, td {
     width: 80%;
 }
 
+#contact_us h2{
+    text-align: center;
+}
+
 .submit_button{
     margin-left: auto;
     margin-top: 10px;
 }
 
 .contact_box{
-    border-style: ridge;
-    
+
     padding: 20px;
     margin-right: 200px;
 }
@@ -164,6 +180,7 @@ th, td {
     outline:none;
     width: auto;
     margin-top: 20px;
+    padding: 10px 10px;
 }
 /*  */
 
@@ -192,8 +209,9 @@ th, td {
 }
 
 .login_button input{
-    width: 100%;
+    width: 60%;
     border:none;
+    margin-left: 55px;
     height: 30px;
     font-size: 15px;
     border-radius: 20px;
@@ -219,15 +237,19 @@ th, td {
     border: none;
     border-bottom: 1px solid;
     outline:none;
+    border-radius: 5px;
 }
 
 .form_box a{
     text-decoration: none;
-    font-size: 13px
+    font-size: 13px;
+    color: black;
+    
+    
 }
 
 .form_box a:hover{
-    color:red;
+    color:yellow;
 }
 /*  */
 
