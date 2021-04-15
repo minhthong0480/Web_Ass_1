@@ -494,17 +494,32 @@ th, td {
     box-sizing: border-box;
 }
 
+.contact_method {padding-bottom: 10px;}
+.contact_purpose {padding-bottom: 10px;}
+
 
 #contact_us label {
     color:orangered;
 }
+
 .submit_button{
     background-color: gray;
     border: none;
     outline:none;
     width: auto;
-    margin-top: 20px;
+    margin-left: 20px;
     padding: 10px 10px;
+    width: 100px;
+}
+
+.reset_button{
+    background-color: gray;
+    border: none;
+    outline:none;
+    width: auto;
+    margin-left: 20px;
+    padding: 10px 10px;
+    width: 100px;
 }
 /*  */
 
@@ -514,7 +529,7 @@ th, td {
     height: 420px;
     margin: 6% auto;
     padding:5px;
-    background: orangered;
+    background: gray;
     border-radius: 20px;
     border-style: double;
 }
@@ -522,7 +537,7 @@ th, td {
     margin-top: 0%;
     margin-left: auto;
     font-weight: bold;
-    color: black;
+    
 }
 
 .login h2{
@@ -532,7 +547,7 @@ th, td {
     
 }
 
-.login_button input{
+.login_button button{
     width: 60%;
     border:none;
     margin-left: 55px;
@@ -541,18 +556,19 @@ th, td {
     border-radius: 20px;
 }
 
-.login_button input:hover{
-    background-color: yellow;
+.login_button button:hover{
+    background-color: orangered;
 }
 
 .username{
-    margin:10px auto;
-    margin-left: 50px;
+    margin:10px;
+    margin-left: 40px;
+    color: orangered;
 }
 
 .password{
-    margin:10px auto;
-    margin-left: 50px;
+    margin:10px;
+    margin-left: 40px;
 }
 
 .form_box input[type="text"], input[type="password"]{
@@ -564,6 +580,8 @@ th, td {
     border-radius: 5px;
 }
 
+
+
 .form_box a{
     text-decoration: none;
     font-size: 13px;
@@ -573,7 +591,7 @@ th, td {
 }
 
 .form_box a:hover{
-    color:yellow;
+    color:orangered;
 }
 /*  */
 
