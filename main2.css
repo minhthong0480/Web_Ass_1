@@ -11,20 +11,65 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 60px;
+    min-width: 320px;
     background-color: gray;
-    
+}
+
+.nav-links-container input{
+    display: none;
+}
+
+.nav-links-container label{
+    display: none;
 }
 
 .nav-links-container ul {
     display: flex;
-    list-style-type: none;
+    list-style-type: none;    
 }
-
 
 .nav-links-container a {
     margin: 0 15px 0 0;
     text-decoration: none;
     color: black;
+    border-radius: 5px;
+}
+
+.nav-links-container a:hover{
+    background: tomato;
+}
+
+/* Responsive Nav Bar */
+@media screen and (max-width: 820px) {
+    .nav-text{
+        font-size: 11px;
+    }
+
+    .menu-image{
+        margin-left: 15px;
+    }
+
+    .nav-text{
+        margin-left: 10px;
+    }
+
+    .nav-links-container label {
+      width: 50px;
+      float: right;
+      display: block;
+    }
+
+    .nav-links-container input[type="checkbox"] ~ .nav-links {
+      display: none;
+    }
+
+    .nav-links-container input[type="checkbox"]:checked ~ .nav-links {
+      display: inline-block;
+    }
+
+    .nav-links-container input[type="checkbox"]:checked ~ .nav-links li {
+      width: 95%;
+    }
 }
 /*  */
 
@@ -35,6 +80,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     min-height: 60px;
+    min-width: 320px;
     background-color: gray;
     font-family: 'Poppins', sans-serif;
 }
@@ -49,7 +95,253 @@ nav{
     color: black;
     text-transform: uppercase;
 }
+
 /*  */
+
+/* CSS for the content section  */
+.container{
+    margin: 20px 20px;
+}
+
+.Heading-container {
+    border: 2px solid black;
+    min-width: 280px;
+    height: 230px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+.Heading-container-1 {
+    border: 2px solid black;
+    min-width: 280px;
+    height: 245px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.Heading-container-2 {
+    border: 2px solid black;
+    min-width: 280px;
+    height: 260px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.inside-content a:hover{
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2)
+}
+
+.container-font{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    background: rgb(253, 95, 3);
+    border-radius: 13px;
+}
+
+.inside-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+
+.detail-content{
+    align-items: center;
+    display: inline-block;
+}
+
+.content-text{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-img img{
+    margin: 5px 20px;   
+    border-radius: 15px;
+} 
+
+.content-text span{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+/* Responsive for the main page */
+
+@media screen and (max-width: 903px) {
+    .Heading-container-1{
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 733px) {
+    .Heading-container-2{
+        height: 490px;
+    }
+}
+
+@media screen and (max-width: 523px) {
+    .Heading-container-1{
+        height: 650px;
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .Heading-container-1{
+        height: 850px;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .Heading-container-2{
+        height: 710px;
+    }
+}
+
+@media screen and (max-width: 373px) {
+    .Heading-container-2{
+        height: 935px;
+    }
+}
+
+/*  */
+
+/* CSS for product page */
+.product-container{
+    height: 620px;
+    border: 2px solid black;
+    margin: 5px;
+    min-width: 310px;
+}
+
+.top-container{
+    height: 410px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.product-specification{
+    display: inline-block;
+}
+
+.description1{
+    margin-left: 10px;
+}
+
+.description2{
+    margin: 5px 10px;
+}
+
+.product-image{
+    margin: 5px 2px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-img1{
+    margin: 3px 3px;
+    height: 140px;
+    width: 135px;
+    background-image: url(ImageProductTesting/iphone-12-pro-max-1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-img2{
+    margin: 3px 4px;
+    height: 140px;
+    width: 135px;
+    background-image: url(ImageProductTesting/iphone-12-pro-max-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-img3{
+    margin: 3px 3px;
+    height: 140px;
+    width: 135px;
+    background-image: url(ImageProductTesting/iphone-12-pro-max-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-img4{
+    margin: 3px 4px;
+    height: 140px;
+    width: 135px;
+}
+.product-name, .product-price{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.product-button{
+    display: inline-block;
+    margin: 0 20px 0 5px;
+}
+
+.product-button-1, .product-button-2{
+    width: 100px;
+    height: 30px;
+    background:rgb(253, 95, 3);
+    border-radius: 7px;
+}
+
+.product-button-2:hover{
+    background:rgb(206, 94, 30);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.product-button-1:hover{
+    background:rgb(206, 94, 30);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+/* Responsive for product image */
+@media screen and (min-width: 600px) {
+    .product-img1, .product-img2, .product-img3{
+        height: 200px;
+        width: 180px;
+    }
+
+    .product-container{
+        height: 550px;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .product-img1, .product-img2, .product-img3{
+        height: 250px;
+        width: 250px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .product-img1, .product-img2, .product-img3{
+        height: 300px;
+        width: 320px;
+    }
+    .product-container{
+        height: 520px;
+    }
+}
 
 /* Responsive */
 
