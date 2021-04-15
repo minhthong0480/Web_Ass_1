@@ -81,7 +81,7 @@
                 <br>
             </div>
             <div class="zipcode">
-                <label for="zipcode" >Enter your Zipcode:</label>
+                <label for="zipcode" >Choose your Zipcode:</label>
                 <input type="number" maxlength="100" placeholder="Enter Your Zipcode" required>
                 <br>
             </div>
@@ -109,38 +109,39 @@
                 <label for="storeowner">Store Owner</label>
                      
                 <input type="radio" name="type_of_account" id="shopper"/>
-                <label for="shopper">Shopper</label>    
+                <label for="shopper">Shopper</label>
+                <div id="store_owner_account_field">
+                    <div class="business_name">
+                        <label for="business-name" >Business Name:</label>
+                        <input type="text" maxlength="100" placeholder="Business Name" required>
+                        <br>
+                    </div>
+                    <div class="store_name">
+                        <label for="store_name" >Store Name:</label>
+                        <input type="text" maxlength="100" placeholder="Enter Your Store Name" required>
+                        <br>
+                    </div>
+                    <div class="store_category">
+                        <form method="post">
+                            <label for="store_category">Choose Your Store Category</label>
+                            <select name="store_category">
+                                <option value="selected">Please select</option>
+                                <option value="Department stores">Department stores</option>
+                                <option value="Grocery stores">Grocery stores</option>
+                                <option value="Restaurants">Restaurants</option>
+                                <option value="Clothing stores">Clothing stores</option>
+                                <option value="Accessory stores">Accessory stores</option>
+                                <option value="Pharmacies">Pharmacies</option>
+                                <option value="Technology stores">Technology stores</option>
+                                <option value="Pet stores">Pet stores</option>
+                                <option value="Toy stores">Toy stores</option>
+                                <option value="Specialty stores">Specialty stores</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>         
             </div>
-            <div id="store_owner_account_field">
-                <div class="business_name">
-                    <label for="business-name" >Business Name:</label>
-                    <input type="text" maxlength="100" placeholder="Business Name" required>
-                    <br>
-                </div>
-                <div class="store_name">
-                    <label for="store_name" >Store Name:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your Store Name" required>
-                    <br>
-                </div>
-                <div class="store_category">
-                    <form method="post">
-                        <label for="store_category">Choose Your Store Category</label>
-                        <select name="store_category">
-                            <option value="selected">Please select</option>
-                            <option value="Department stores">Department stores</option>
-                            <option value="Grocery stores">Grocery stores</option>
-                            <option value="Restaurants">Restaurants</option>
-                            <option value="Clothing stores">Clothing stores</option>
-                            <option value="Accessory stores">Accessory stores</option>
-                            <option value="Pharmacies">Pharmacies</option>
-                            <option value="Technology stores">Technology stores</option>
-                            <option value="Pet stores">Pet stores</option>
-                            <option value="Toy stores">Toy stores</option>
-                            <option value="Specialty stores">Specialty stores</option>
-                        </select>
-                    </form>
-                </div>
-            </div>
+            
             <div class="regis_button">
                 <input type="submit" value="Send">
                 <input type="reset" value="Reset">

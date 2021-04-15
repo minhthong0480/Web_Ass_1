@@ -55,29 +55,32 @@ nav{
 
 @media screen and (max-width:767px){
     #contact_us h2{
-        text-align: center;
+        text-align: center; 
     }
-    .enter_name {
-        position:flex;
-    }
+    
     .input_box_1{
         margin-left: 0px;
+       
         width:max-content;
         display:block;
+        
     }
-    .input_box_1 input{
+    .input_box_1 input[type]{
         display: block;
+        width: max-content;
     }
     .input_box_2{
         width: max-content;
         display: block;
+        margin-left: 0px;
+        
     }
-    .input_box_2 input{
-        display: block;
+    .input_box_2 input[type]{
+        display:block;
+        
     }
 }
     
-
 /*  */
 
 /* Fee table */
@@ -198,6 +201,7 @@ th, td {
     padding: 10px;
     box-sizing: border-box;
 }
+
 
 #contact_us label {
     color:orangered;
@@ -344,17 +348,20 @@ th, td {
     
     justify-content: center;
     margin-left: 50px;
+    
 }
 
 .title {
     text-align: center;
-    
+    font-size: 30px;
+    font-weight: bold;
 }
 
 label{
     padding: 10px;
     font-weight: 200px;
     font-style: italic;
+    color: orangered;
 }
 
 #register_form{
@@ -363,10 +370,11 @@ label{
     margin-left: 30%;
     margin-bottom: 20px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .regis_button{
-    justify-items: center;
+    margin-left: 150px;
 }
 
 input{
@@ -381,12 +389,11 @@ input{
     margin-left: 100px;
 }
 
-#store_owner_account_field{
+#store_owner_account_field {
     display:none;
-    height: max-content;
 }
 
-#store_owner:checked ~ #store_owner_account_field{
+#store_owner:checked ~ #store_owner_account_field {
     display: block;
 }
 /*  */
