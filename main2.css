@@ -51,6 +51,35 @@ nav{
 }
 /*  */
 
+/* Responsive */
+
+@media screen and (max-width:767px){
+    #contact_us h2{
+        text-align: center;
+    }
+    .enter_name {
+        position:flex;
+    }
+    .input_box_1{
+        margin-left: 0px;
+        width:max-content;
+        display:block;
+    }
+    .input_box_1 input{
+        display: block;
+    }
+    .input_box_2{
+        width: max-content;
+        display: block;
+    }
+    .input_box_2 input{
+        display: block;
+    }
+}
+    
+
+/*  */
+
 /* Fee table */
 #fee_table{
     border: 1px solid black;
@@ -133,7 +162,6 @@ th, td {
     margin-right: 200px;
 }
 
-.contact_box {flex-basis: 45%;}
 
 .enter_name input {
     width: 30%;
@@ -306,8 +334,18 @@ th, td {
 
 /* register page */
 
+.profile-pic{
+    width:100px;
+    height: 100px;
+    display: block;
+}
 
+#store_owner_account_field{
+    display: none;
+}
 
-
+#store_owner:checked ~ #store_owner_account_field{
+    display: block;
+}
 
 /*  */

@@ -36,23 +36,116 @@
         <form method="post">
             <div class="regis_phone">
                 <label for="phone">Enter your phone here: </label>
-                <input type="tel" name="your_phone" id="phone" placeholder='090-123-4567' required>
+                <input type="tel" placeholder='090-123-4567' required>
                 <br>
             </div>
             <div class="regis_email">
                 <label for="email">Enter your email here: </label>
-                <input type="email" name="your_email" id="email" placeholder="contactus@example.com" autocomplete='off' required>
+                <input type="email" placeholder="contactus@example.com" autocomplete='off' required>
                 <br>
             </div>
             <div class="regis_password">
                 <label for="password" >Enter your password:</label>
-                <input type="text" name="password" id="your_password" maxlength="100" placeholder="Password" required>
+                <input type="text" maxlength="100" placeholder="Password" required>
                 <br>
             </div>
             <div class="regis_retype_password">
-                <label for="password" >Enter your password:</label>
-                <input type="text" name="password" id="your_password" maxlength="100" placeholder="Password" required>
+                <label for="password" >Comfirm your password:</label>
+                <input type="text" maxlength="100" placeholder="Re-enter Password" required>
                 <br>
+            </div>
+            <div class="profile_picture">
+                <p class="choose_profile">Choose your profile picture: </p>
+                <img class="profile-pic" src="images/blank-profile-picture-973460_640.png">
+                <br>
+            </div>
+            <div class="first_name">
+                <label for="first_name" >Enter your First name:</label>
+                <input type="text" maxlength="100" placeholder="Enter Your First Name" required>
+                <br>
+            </div>
+            <div class="last_name">
+                <label for="last_name" >Enter your Last name:</label>
+                <input type="text" maxlength="100" placeholder="Enter Your Last Name" required>
+                <br>
+            </div>
+            <div class="address">
+                <label for="address" >Enter your Address:</label>
+                <input type="text" maxlength="100" placeholder="Enter Your Address" required>
+                <br>
+            </div>
+            <div class="city">
+                <label for="city" >Your City:</label>
+                <input type="text" maxlength="100" placeholder="Enter Your City" required>
+                <br>
+            </div>
+            <div class="zipcode">
+                <label for="zipcode" >Enter your Zipcode:</label>
+                <input type="number" maxlength="100" placeholder="Enter Your Zipcode" required>
+                <br>
+            </div>
+            <div class="country">
+                <form method="POST">
+                    <label for="country">Choose Your Country</label>
+                    <select name="country" id="country">
+                        <option value="selected">Please select</option>
+                        <option value="VN">Vietnam</option>
+                        <option value="US">United State</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="TH">Thailand</option>
+                        <option value="NZ">New Zealand</option>
+                        <option value="IT">Italy</option>
+                        <option value="HK">Hong Kong</option>
+                        <option value="DE">Germany</option>
+                        <option value="FR">France</option>
+                    </select>
+                    <br>
+                </form>
+                    
+            </div>
+            <div class="account_type">
+                    <p>Choose Your Type of Account: </p>
+                    <input type="radio" name="type of account" id="store_owner"/>
+                    <label for="store_owner">Store Owner</label>
+                     
+                    <input type="radio" name="type of account" id="shopper"/>
+                    <label for="shopper">Shopper</label>
+                    
+                    <br>
+            </div>
+            <div id="store_owner_account_field">
+                <div class="business_name">
+                    <label for="business-name" >Business Name:</label>
+                    <input type="text" maxlength="100" placeholder="Business Name" required>
+                    <br>
+                </div>
+                <div class="store_name">
+                    <label for="store_name" >Store Name:</label>
+                    <input type="text" maxlength="100" placeholder="Enter Your Store Name" required>
+                    <br>
+                </div>
+                <div class="store_category">
+                    <form method="post">
+                        <label for="store_category">Choose Your Store Category</label>
+                        <select name="store_category">
+                            <option value="selected">Please select</option>
+                            <option value="Department stores">Department stores</option>
+                            <option value="Grocery stores">Grocery stores</option>
+                            <option value="Restaurants">Restaurants</option>
+                            <option value="Clothing stores">Clothing stores</option>
+                            <option value="Accessory stores">Accessory stores</option>
+                            <option value="Pharmacies">Pharmacies</option>
+                            <option value="Technology stores">Technology stores</option>
+                            <option value="Pet stores">Pet stores</option>
+                            <option value="Toy stores">Toy stores</option>
+                            <option value="Specialty stores">Specialty stores</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Send" class="submit_button">
+                <input type="reset" value="Reset" class="submit_button">
             </div>
         </form>
     </div>
