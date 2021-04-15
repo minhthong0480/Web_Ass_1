@@ -547,7 +547,7 @@ th, td {
     
 }
 
-.login_button button{
+.login_button input{
     width: 60%;
     border:none;
     margin-left: 55px;
@@ -556,7 +556,7 @@ th, td {
     border-radius: 20px;
 }
 
-.login_button button:hover{
+.login_button input:hover{
     background-color: orangered;
 }
 
