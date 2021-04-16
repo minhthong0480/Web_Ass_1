@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mall Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="main2.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="Mall Logo" width="125px" class="logo2">
+            </div>
+            <div class="nav-text">
+                <h1> MALL CENTER</h1>
+            </div>
+            <div class="nav-links-container">
+                <input type="checkbox" id="menu-icon">
+
+                <div class="menu-image">
+                    <label for="menu-icon"><img src="images/menu.png" width="20px" alt="Menu Navigation" class="Nav-logo-mini"></label>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About_us.html">About Us</a></li>
+                    <li><a href="fee_table.html">Fees</a></li>
+                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="browse_store.html">Browse</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="privacy_policy"> 
+        <div>When you sign up to our <website, you are voluntarily provide us with certain information which include: </div>
+        <div>
+            <ul>
+                <li>Name</li>
+                <li>Email address</li>
+                <li>Phone number</li>
+                <li>Zipcode</li>
+                <li>Address</li>
+            </ul>
+        </div>
+        <div>We will collect some information arcording to the users action on this website.</div>
+    </div>
+    
+    <footer>
+        <div class="nav-bottom">
+            <ul>
+                <li><a href="coppyright.html">Coppyright</a></li>
+                <li><a href="term of service.html">Term of Service</a></li>
+                <li><a href="privacy policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
