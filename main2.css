@@ -403,6 +403,14 @@ nav{
 }
 
 /*  */
+/* Responsive for your profile page */
+
+.avatar_card img{
+    margin: 10px 10px;
+    width: 100px;
+}
+
+/*  */
 
 /* Fee table */
 #fee_table{
@@ -802,3 +810,4 @@ input{
         font-size: 13px;
     }
 }
+/*  */
