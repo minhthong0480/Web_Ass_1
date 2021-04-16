@@ -765,3 +765,40 @@ input{
 }
 
 /*  */
+
+/*CSS for "About us" page*/
+.member {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.personal_info {
+    padding: 0 2%;
+}
+
+/*  */
+/*CSS for Coppyright, Term of servise, Privacy policy*/
+#coppyright li, #ToS li, #privacy_policy li {
+    margin: 0 20px;
+}
+#coppyright > div, #ToS > div, #privacy_policy > div {
+    margin-inline-start: 2%;
+}
+#coppyright,#ToS,#privacy_policy {
+    font-size: 20px;
+}
+@media screen and (max-width: 903px) {
+
+}
+
+@media screen and (max-width: 733px) {
+    #coppyright,#ToS,#privacy_policy {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #coppyright,#ToS,#privacy_policy {
+        font-size: 13px;
+    }
+}
