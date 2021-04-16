@@ -349,6 +349,9 @@ nav{
     #contact_us h2{
         text-align: center; 
     }
+    #contact_us p{
+        text-align: center;
+    }
     
     .input_box_1{
         margin-left: 0px;
@@ -372,7 +375,33 @@ nav{
         
     }
 }
+/* Responsive fee page*/
+@media screen and (max-width:767px){
+    .parafee{
+        text-align: center;
+        margin-right: 20px;
+    }
+}
     
+/*  */
+
+/* Responsive faqs page*/
+
+@media screen and (max-width:767px){
+    .wrapper{
+        padding-right: 40px;
+    }
+}
+/*  */
+
+/* Responsive regis account page */
+
+@media screen and (max-width:767px){
+    .regis_button input{
+        display: block;
+    }
+}
+
 /*  */
 
 /* Fee table */
@@ -390,6 +419,7 @@ th, td {
 }
 .parafee{
     margin-left:50px;
+    text-align: center;
 }
 /*  */
 
@@ -434,6 +464,7 @@ th, td {
 .dropdown:focus-within .wrapper{
     display:block;
 }
+
 /*  */
 
 /* contact us */
@@ -582,12 +613,11 @@ th, td {
 
 
 
-.form_box a{
+.form_box .link_to_another_page{
     text-decoration: none;
     font-size: 13px;
     color: black;
-    
-    
+    padding-left: 30%;
 }
 
 .form_box a:hover{
@@ -598,18 +628,18 @@ th, td {
 /* forgot pass */
 
 .forgotpass{
-    display: flex;
-    height: 50vh;
+    display: block;
+    margin-bottom: 20px;
     width: 100%;
     justify-content: center;
     align-items: center;
+    margin-left: 30%;
 }
 
-.forgotpass .fpass{
+.fpass{
     background: darkgray;
     width: 40%;
     padding: 15px 20px;
-    border: solid;
     border-radius: 10px;
 }
 
@@ -654,13 +684,6 @@ th, td {
     display: block;
 }
 
-.register{
-    
-    justify-content: center;
-    margin-left: 50px;
-    
-}
-
 .title {
     text-align: center;
     font-size: 30px;
@@ -677,7 +700,7 @@ label{
 #register_form{
     border: 1px solid;
     width: fit-content;
-    margin-left: 30%;
+    
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -698,7 +721,9 @@ input{
     padding:10px;
     margin-left: 100px;
 }
-
+#store_owner{
+    display: inline-flex;
+}
 #store_owner_account_field {
     display:none;
 }
