@@ -343,7 +343,7 @@ nav{
     }
 }
 
-/* Responsive */
+/* Responsive contact us page*/
 
 @media screen and (max-width:767px){
     #contact_us h2{
@@ -706,4 +706,37 @@ input{
 #store_owner:checked ~ #store_owner_account_field {
     display: block;
 }
+/*  */
+
+/* Profile page */
+
+.title_profile{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.avatar_card{
+    float: left;
+    display: block;
+}
+.row{
+    margin-left: 15%;
+    display: block;
+    padding:10px
+}
+.row h4{
+    color: orangered;
+}
+#date_of_birth{
+    width: 100px;
+}
+
+#year_of_birth{
+    width: 100px;
+}
+#month_of_birth{
+    width: 100px;
+    padding: 8px
+}
+
 /*  */
