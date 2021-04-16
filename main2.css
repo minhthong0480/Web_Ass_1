@@ -404,11 +404,13 @@ nav{
 
 /*  */
 /* Responsive for your profile page */
-
-.avatar_card img{
-    margin: 10px 10px;
-    width: 100px;
+@media screen and (max-width:767px){
+    .avatar_card img{
+        margin: 10px 10px;
+        width: 100px;
+    }
 }
+
 
 /*  */
 
@@ -749,7 +751,7 @@ input{
     font-weight: bold;
 }
 .avatar_card{
-    float: left;
+    margin-left: 15%;
     display: block;
 }
 .row{
