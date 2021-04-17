@@ -595,6 +595,7 @@ th, td {
     height: 30px;
     font-size: 15px;
     border-radius: 20px;
+    outline: none;
 }
 
 .login_button input:hover{
@@ -813,4 +814,54 @@ input{
     }
 }
 /*  */
+/* order placement */
+
+.total_box{
+    float:right;
+}
+.row_product{
+    display: flex;
+    padding-left: 5%;
+}
+
+.quantity_order{
+    width: 50px;
+    padding: 0px;
+    text-align: center;
+}
+#body_order{
+    display: flex;
+    flex-wrap: wrap;
+}
+.order{
+    flex: 70%;
+}
+.total_box{
+    flex: 30%;
+}
+.total_box input[type="button"]:hover{
+    background-color: orangered;
+    outline:none;
+}
+/*  */
+
+/* Responsive for order placement */
+@media screen and(max-width:767px){
+    .row_product{
+        padding-left: 0px;
+    }
+
+}
+    
+/*  */
+
+/* thank you page */
+.content_thk_page{
+    text-align: center;
+    margin: 300px 300px;
+    font-size: 40px;
+    font-weight: bold;
+}
+/*  */
+
 
