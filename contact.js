@@ -37,11 +37,31 @@ function check_phone(){
           }
     }
     else {alert("Please input your phome number")}
+
+    function check_email(){
+        ck_email = qs("#email").value;
+        email_pattern = /^[^.][a-z.?A-Z.?0-9]{3,}[^.]@[^.][a-z.?A-Z.?0-9].[a-zA-Z]{2,5}[^.]$/;
+    }
         
-        
+}
+
+function check_checkbox()
+{
+    var checkboxs=document.getElementsByName("contact_day");
+    var okay=false;
+    for(var i=0,n=checkboxs.length;i<n;i++)
+    {
+        if(checkboxs[i].checked)
+        {
+            okay=true;
+            break;
+        }
+    }
+    if(okay){return true}
+    else {alert("Please check a checkbox")};
 }
 
 btn = qs(".submit_button");
 btn.addEventListener("click",check_name);
 btn.addEventListener("click",check_phone);
-
+btn.addEventListener("click",check_checkbox);
