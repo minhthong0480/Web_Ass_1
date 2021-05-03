@@ -40,7 +40,7 @@ function check_phone(){
 
     function check_email(){
         ck_email = qs("#email").value;
-        email_pattern = /^[^.][a-z.?A-Z.?0-9]{3,}[^.]@[^.][a-z.?A-Z.?0-9].[a-zA-Z]{2,5}[^.]$/;
+        email_pattern = /^(?!\.)[a-z.?A-Z.?0-9]{3,}(?<!\.)\@(?!\.)[a-z.?A-Z.?0-9]+(?<!\.)[.]{1}[a-zA-Z]{2,5}(?<!\.)$/;
     }
         
 }
