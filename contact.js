@@ -13,6 +13,7 @@ function validate() {
         return false;
       }
     }
+    alert("Your form has been sent successfully")
     return true;
   }
 
