@@ -22,11 +22,14 @@ function validate() {
 function check_name (){
     var e = qs("#your_name");
     ck_name = e.value;
-    if (ck_name.length < 3){
+    if (ck_name.length > 0){
+      if (ck_name.length < 3){
         alert("Your name needs at least 3 characters");
         return true;
     }
     else {return false;}
+    }
+    else { alert("Please input a valid name") }
 }
 
 function check_phone(){
@@ -45,7 +48,7 @@ function check_phone(){
 function check_email(){
     ck_email = qs("#email").value;
     email_pattern = /^(?!\.)[a-z.?A-Z.?0-9]{3,}(?<!\.)\@(?!\.)[a-z.?A-Z.?0-9]+(?<!\.)[.]{1}[a-zA-Z]{2,5}(?<!\.)$/;
-    if (ck_email.length>0){
+    if (ck_email.length > 0){
       if(email_pattern.test(ck_email)){
         return true;
       } else {alert("Invalid email");}
@@ -72,7 +75,7 @@ function check_checkbox()
 }
 
 btn = qs(".submit_button");
-btn.addEventListener("click",validate)
+btn.addEventListener("click",validate);
 /*
 btn.addEventListener("click",check_name);
 btn.addEventListener("click",check_phone);

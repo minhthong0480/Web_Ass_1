@@ -5,15 +5,15 @@ function qs(selector){
 
 function validate1() {
     results = {
-      'email': validateEmail,
-      'phone': validatePhone,
-      'password': validatePass,
-      'retypepass': validateRepass,
-      'first_name': validateFirstname,
-      'last_name': validateLastname,
-      'address': validateAddress,
-      'city': validateCity,
-      'zipcode': validateZipcode,
+       'email': validate_email(),
+      'phone': validate_phone(),
+      'password': validate_pass(),
+      'retypepass': validate_repass(),
+      'first_name': validate_firstname(),
+      'last_name': validate_lastname(),
+      'address': validate_address(),
+      'city': validate_city(),
+      'zipcode': validate_zipcode(),
     };
 
     for (let idx in results) {
@@ -21,26 +21,27 @@ function validate1() {
         return false;
       }
     }
-    alert("Your form has been sent successfully");
+    
     return true;
   }
 
-function validateEmail(){
-    ck_email = qs(".regis_email").value;
+function validate_email(){
+    var e = qs(".regis_email");
+    vali_email = e.value;
     email_pattern = /^(?!\.)[a-z.?A-Z.?0-9]{3,}(?<!\.)\@(?!\.)[a-z.?A-Z.?0-9]+(?<!\.)[.]{1}[a-zA-Z]{2,5}(?<!\.)$/;
-    if (ck_email.length>0){
-      if(email_pattern.test(ck_email)){
+    if (vali_email.length > 0){
+      if(email_pattern.test(vali_email)){
         return true;
       } else {alert("Invalid email");}
     }
     else{alert("Please input your email");}
   }
-  
-  function validatePhone(){
+
+  function validate_phone(){
     mobile_pattern = /^(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])|(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])|(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])$/;
-    ck_phone = qs(".regis_phone").value;
-    if (ck_phone.length > 0){
-        if ( mobile_pattern.test(ck_phone)) {
+    vali_phone = qs(".regis_phone").value;
+    if (vali_phone.length > 0){
+        if ( mobile_pattern.test(vali_phone)) {
             return true;
           } else {
             alert("Invalid phone");
@@ -49,31 +50,33 @@ function validateEmail(){
     else {alert("Please input your phone number")}        
   }
   
-  function validatePass(){
+  function validate_pass(){
     pass_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
-    ck_pass = qs(".regis_password").value;
-    if(ck_pass.length < 8 || ck_pass.length > 20){
-      if ( pass_pattern.test(ck_pass)) {
+    vali_pass = qs(".regis_password").value;
+    if(vali_pass.length < 8 || vali_pass.length > 20){
+      if ( pass_pattern.test(vali_pass)) {
         return true;
       } else {
         alert("Invalid Password");
       }
     }
+    else{alert("Please input your password")}
   }
   
-  function validateRepass(){
-    repass_pattern = 
-    ck_repass = qs(".regis_retype_password").value;
-    if(ck_repass.length < 8 || ck_repass.length > 20){
-      if ( repass_pattern.test(ck_repass)) {
+  function validate_repass(){
+    repass_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
+    vali_repass = qs(".regis_retype_password").value;
+    if(vali_repass.length < 8 || vali_repass.length > 20){
+      if ( repass_pattern.test(vali_repass)) {
         return true;
       } else {
         alert("Invalid ReType Password");
       }
     }
+    else{alert("PLease reinput your password")}
   }
   
-  function validateFirstname (){
+  function validate_firstname(){
     var e = qs(".first_name");
     first_name = e.value;
     if (first_name.length < 3){
@@ -83,7 +86,7 @@ function validateEmail(){
     else {return false;}
   }
 
-  function validateLastname (){
+  function validate_lastname(){
     var e = qs(".last_name");
     last_name = e.value;
     if (last_name.length < 3){
@@ -93,7 +96,7 @@ function validateEmail(){
     else {return false;}
   }
 
-  function validateAddress (){
+  function validate_address(){
     var e = qs(".address");
     address = e.value;
     if (address.length < 3){
@@ -103,7 +106,7 @@ function validateEmail(){
     else {return false;}
   }
 
-  function validateCity (){
+  function validate_city(){
     var e = qs(".city");
     city = e.value;
     if (city.length < 3){
@@ -113,7 +116,7 @@ function validateEmail(){
     else {return false;}
   }
 
-  function validateZipcode(){
+  function validate_zipcode(){
     zipcode_pattern = /^[0-9]{4,6}$/;
     ck_zipcode = qs(".zipcode").value;
     if(ck_zipcode.length < 8 || ck_zipcode.length > 20){
@@ -126,7 +129,7 @@ function validateEmail(){
   }
   
   btn1 = qs("#regis_submit_button");
-  btn1.addEventListener("click",validate1)
+  btn1.addEventListener("click",validate1);
   
   /*
   btn1.addEventListener("click",validateEmail);
