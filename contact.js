@@ -11,12 +11,13 @@ function validate() {
       'checkbox': check_checkbox(),
     };
 
-    for (let idx in results) {
-      if (!results[idx]) {
-        return false;
+    for (let index in results) {
+      if (results[index]) {
+        alert("Congratulation!!! Your form has been sent successfully");
+        return true;
       }
     }
-    return true;
+    return false;
   }
 
 function check_name (){
@@ -25,9 +26,9 @@ function check_name (){
     if (ck_name.length > 0){
       if (ck_name.length < 3){
         alert("Your name needs at least 3 characters");
-        return true;
+        return false;
     }
-    else {return false;}
+    else {return true;}
     }
     else { alert("Please input a valid name") }
 }
@@ -73,6 +74,12 @@ function check_checkbox()
     }
     else {alert("Please check a checkbox")};
 }
+
+/** Message box */
+
+
+
+/** */
 
 btn = qs(".submit_button");
 btn.addEventListener("click",validate);

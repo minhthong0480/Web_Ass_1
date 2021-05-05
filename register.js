@@ -16,13 +16,13 @@ function validate1() {
       'zipcode': validate_zipcode(),
     };
 
-    for (let idx in results) {
-      if (!results[idx]) {
-        return false;
+    for (let index in results) {
+      if (results[index]) {
+        alert("Congratulation!!! Your form has been sent successfully");
+        return true;
       }
     }
-    
-    return true;
+    return false;
   }
 
 function validate_email(){
