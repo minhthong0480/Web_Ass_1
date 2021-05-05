@@ -535,6 +535,11 @@ th, td {
     box-sizing: border-box;
 }
 
+#messages_box{
+    margin-top:10px;
+    margin-bottom: 30px;
+}
+
 .contact_method {padding-bottom: 10px;}
 .contact_purpose {padding-bottom: 10px;}
 

@@ -26,7 +26,7 @@ function validate1() {
   }
 
 function validate_email(){
-    var e = qs(".regis_email");
+    var e = qs("#regis_email");
     vali_email = e.value;
     email_pattern = /^(?!\.)[a-z.?A-Z.?0-9]{3,}(?<!\.)\@(?!\.)[a-z.?A-Z.?0-9]+(?<!\.)[.]{1}[a-zA-Z]{2,5}(?<!\.)$/;
     if (vali_email.length > 0){
@@ -39,7 +39,8 @@ function validate_email(){
 
   function validate_phone(){
     mobile_pattern = /^(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])|(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])|(0[-. ]?[1-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9][-. ]?[0-9])$/;
-    vali_phone = qs(".regis_phone").value;
+    var e = qs("#regis_phone")
+    vali_phone = e.value;
     if (vali_phone.length > 0){
         if ( mobile_pattern.test(vali_phone)) {
             return true;
@@ -51,8 +52,9 @@ function validate_email(){
   }
   
   function validate_pass(){
-    pass_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
-    vali_pass = qs(".regis_password").value;
+    pass_pattern = /^(?!.*[\s])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
+    var e = qs("#regis_password")
+    vali_pass = e.value;
     if(vali_pass.length < 8 || vali_pass.length > 20){
       if ( pass_pattern.test(vali_pass)) {
         return true;
@@ -64,8 +66,9 @@ function validate_email(){
   }
   
   function validate_repass(){
-    repass_pattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
-    vali_repass = qs(".regis_retype_password").value;
+    repass_pattern = /^(?!.*[\s])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(.{8,20})$/;
+    var e = qs("#regis_repass")
+    vali_repass = e.value;
     if(vali_repass.length < 8 || vali_repass.length > 20){
       if ( repass_pattern.test(vali_repass)) {
         return true;
@@ -77,27 +80,27 @@ function validate_email(){
   }
   
   function validate_firstname(){
-    var e = qs(".first_name");
+    var e = qs("#first_name");
     first_name = e.value;
     if (first_name.length < 3){
-        alert("Your name needs at least 3 characters");
+        alert("Your first name needs at least 3 characters");
         return true;
     }
     else {return false;}
   }
 
   function validate_lastname(){
-    var e = qs(".last_name");
+    var e = qs("#last_name");
     last_name = e.value;
     if (last_name.length < 3){
-        alert("Your name needs at least 3 characters");
+        alert("Your last name needs at least 3 characters");
         return true;
     }
     else {return false;}
   }
 
   function validate_address(){
-    var e = qs(".address");
+    var e = qs("#address");
     address = e.value;
     if (address.length < 3){
         alert("Your address needs at least 3 characters");
@@ -107,7 +110,7 @@ function validate_email(){
   }
 
   function validate_city(){
-    var e = qs(".city");
+    var e = qs("#city");
     city = e.value;
     if (city.length < 3){
         alert("Your city's name needs at least 3 characters");
@@ -118,7 +121,7 @@ function validate_email(){
 
   function validate_zipcode(){
     zipcode_pattern = /^[0-9]{4,6}$/;
-    ck_zipcode = qs(".zipcode").value;
+    ck_zipcode = qs("#zipcode").value;
     if(ck_zipcode.length < 8 || ck_zipcode.length > 20){
       if ( zipcode_pattern.test(ck_zipcode)) {
         return true;
