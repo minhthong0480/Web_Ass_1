@@ -59,8 +59,8 @@ function check_email(){
 
 function check_checkbox()
 {
-    var checkbox=document.getElementsByName("contact_day");
-    var box_checked=false;
+    var checkbox = document.getElementsByName("contact_day");
+    var box_checked = false;
     for(var i=0,n=checkbox.length;i<n;i++)
     {
         if(checkbox[i].checked)
@@ -81,18 +81,18 @@ var message = qs("#messages_box");
 var count = qs("#counter");
 
 message.onkeyup = function(){
-if (this.value.length <= 50)(
-  count.innerHTML = (50 - this.value.length) +" "+ "more letter are needed");
-if (this.value.length > 50 && this.value.length <= 500)(
-  count.innerHTML = "You can type" + " " + (500 - this.value.length) + " " + "more letters"
+if (message.value.length <= 50)(
+  count.innerHTML = (50 - message.value.length) +" "+ "more letter are needed");
+if (message.value.length > 50 && message.value.length <= 500)(
+  count.innerHTML = "You can type" + " " + (500 - message.value.length) + " " + "more letters"
 );
-if (this.value.length > 500)(
-  count.innerHTML = "Deleting" + " " + (this.value.length - 500) +" "+ "letters is needed"
+if (message.value.length > 500)(
+  count.innerHTML = "Deleting" + " " + (message.value.length - 500) +" "+ "letters is needed"
 );
 };
 
-
 /** */
+
 
 btn = qs(".submit_button");
 btn.addEventListener("click",validate);
