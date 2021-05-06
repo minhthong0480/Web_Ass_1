@@ -1046,17 +1046,7 @@ input{
 
 /*  */
 
-/*CSS for "About us" page*/
-.member {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-.personal_info {
-    padding: 0 2%;
-}
 
-/*  */
 /*CSS for Coppyright, Term of servise, Privacy policy*/
 #coppyright li, #ToS li, #privacy_policy li {
     margin: 0 20px;
