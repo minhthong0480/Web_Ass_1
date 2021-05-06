@@ -77,6 +77,19 @@ function check_checkbox()
 
 /** Message box */
 
+var message = qs("#messages_box");
+var count = qs("#counter");
+
+message.onkeyup = function(){
+if (this.value.length <= 50)(
+  count.innerHTML = (50 - this.value.length) +" "+ "more letter are needed");
+if (this.value.length > 50 && this.value.length <= 500)(
+  count.innerHTML = "You can type" + " " + (500 - this.value.length) + " " + "more letters"
+);
+if (this.value.length > 500)(
+  count.innerHTML = "Deleting" + " " + (this.value.length - 500) +" "+ "letters is needed"
+);
+};
 
 
 /** */
