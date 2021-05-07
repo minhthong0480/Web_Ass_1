@@ -160,6 +160,14 @@ nav{
     margin: 5px;
 }
 
+.inside-content-1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    margin: 5px;
+}
+
 
 .detail-content{
     align-items: center;
