@@ -165,8 +165,23 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    
     margin: 5px;
+}
+
+.inside-content-2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.child {
+    width: 150px;
+    height: 150px;
+    padding-top: 35px;
+    float: left;
+    text-align: center;
+    font-size: 60px;
 }
 
 
