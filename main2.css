@@ -127,6 +127,7 @@ nav{
     align-items: center;
     margin-bottom: 10px;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .Heading-container-2 {
