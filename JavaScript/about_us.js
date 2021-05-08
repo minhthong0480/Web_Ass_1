@@ -3,6 +3,12 @@
 /* Thong extra infomation */
 let image = document.getElementById("Thong's photo")
 let overlay1 = document.querySelector("#Thong")
+/* Prevent popup when open the page */
+setTimeout (
+    function () {
+    document.querySelector("#Thong").style.display = "none";
+}, 1)
+/*     */
 image.addEventListener ("click", function on () {
     document.getElementById("Thong").style.display = "block";
   })
