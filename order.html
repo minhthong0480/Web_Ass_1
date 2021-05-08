@@ -7,16 +7,9 @@
     <title>Mall Website</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="main2.css">
+    <script src="order.js" async></script>
 </head>
 <body>
-    <div id="cookie">
-        <div>I use cookies</div>
-        <div>My website uses cookies necessary for its basic funtions. By continuing using, you consent to my uses of cookies and other technologies.</div>
-        <button id="agreement">I understand</button>
-        <a href="https://gdpr-info.eu/">
-            Learn more
-        </a>
-    </div>
     <header>
         <nav>
             <div class="nav-logo">
@@ -44,80 +37,70 @@
             </div>
         </nav>
     </header>
-    <div style="margin: 0;" id="body_order">
+
+
+    <div class="order_container">
         <div class="order">
-            <div class="row_product">
+            <div class="row_product">            
                 <div class="image_order">
-                  <div class="product_image_order">
-                      <img src="ImageProductTesting/iphone-12-pro-max-1.jpeg" alt="iphone-12-pro-max-1" width="200px">
-                  </div>
+                        
+                    <img src="ImageProductTesting/iphone-12-pro-max-1.jpeg" alt="iphone-12-pro-max-1" width="200px">
+                        
                 </div>
-                  <div class="produc_infor">
-                      <div class="product-name_order">
-                          <h3>Name: Iphone 12 Pro-Max</h3>
-                      </div>
-                      <div class="product_price_order">
-                          <h3>Price: 25.900.000 VND</h3>
-                      </div>
-                      <div class="product_quantity_order">
-                          <input type="number" min="1" max="10" class="quantity_order">
-                      </div>
-                  </div>
-                  
+
+                <div class="product-name_order">
+                  <h3>Name: Iphone 12 Pro-Max</h3>
+                </div>
+                    
+                <h3 class="product_price">Price: 31.927.000 VND</h3>
+                    
+                <div class="product_quantity_order">
+                  <input type="number" min="1" max="10" class="quantity_order" value="1">
+                  <button class="remove-button" type="button">REMOVE</button>
+                </div>
+                 
             </div>
-            <hr style="width: 50%; margin-left: 50px;">
-  
-            <div class="row_product">
-              <div class="image_order">
-                      <img src="images/Airpod-2.jpg" alt="Airpod-2" width="200px">
-              </div>
-              <div class="product_infor">
-                  <div class="product-name_order">
-                      <h3>Name: Airpod 2</h3>
-                  </div>
-                  <div class="product_price_order">
-                      <h3>Price: 4.990.000 VND</h3>
-                  </div>
-                  <div class="product_quantity_order">
-                      <input type="number" min="1" max="10" class="quantity_order">
-                  </div>
-              </div>
-          </div>
-          <hr style="width: 50%; margin-left: 50px;">
-  
-          <div class="row_product">
-              <div class="image_order">
-                  <img src="images/Canon-OES-300D.jpg" alt="Airpod-2" width="200px">
-              </div>
+
+            <hr style="width: 50%; margin-left: 50px; margin-top: 10px;">
+    
+            <div class="row_product">                
                 
-              <div class="product_infor">
-                  <div class="product-name_order">
-                      <h3>Name: Canon OES 300D</h3>
-                  </div>
-                  <div class="product_price_order">
-                      <h3>Price: 8.800.000 VND</h3>
-                  </div>
-                  <div class="product_quantity_order">
-                      <input type="number" min="1" max="10" class="quantity_order">
-                  </div>
-              </div>
-          </div>
-      </div>
+                <div class="image_order">
+        
+                     <img src="images/Airpod-2.jpg" alt="Airpod-2" width="200px">
+                        
+                </div>
+
+                <div class="product-name_order">
+                    <h3>Name: Airpod 2</h3>
+                </div>
+            
+                <h3 class="product_price">Price: 4.903.000 VND</h3>
+                    
+                <div class="product_quantity_order">
+                  <input type="number" min="1" max="10" class="quantity_order" value="2">
+                  <button class="remove-button" type="button">REMOVE</button>
+                </div>     
+            </div>
+
+            <hr style="width: 50%; margin-left: 50px; margin-top: 10px;">
+
+        </div>  
+    
         <div class="total_box">
             <h3 style="color: orangered;">Delivery Address</h3>
             <p class="delivery_name">John Smith</p>
             <p class="delivery_phone">0919123456</p>
             <p class="delivery_address">3809 Cinnamon Lane, San Antonio</p>
             <hr style="width: 50%; margin-right: 50px;">
-            <p class="total_order">Total: 39.690.000 VND</p>
-            <a href="index.html"><input type="button" id="continue_shopping" value="Continue Shopping"></a>
-            <a href="thankyou.html"><input type="button" id="Order" value="Order"></a>
+            <p>Total:</p>
+            <p class="total_order"> 41.711.000 VND</p>
+            <a href="index.html"><input type="button" class="continue_shopping" value="Continue Shopping"></a>
+            <a href="thankyou.html"><input type="button" class="Order" value="Order"></a>
             
         </div>
     </div>
     
-    
-
     <footer>
         <div class="nav-bottom">
             <ul>
@@ -127,6 +110,5 @@
             </ul>
         </div>
     </footer>
-    <script src="JavaScript/cookie_consent.js"></script>
 </body>
 </html>
