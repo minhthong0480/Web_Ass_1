@@ -329,10 +329,35 @@ nav{
 }
 
 .product-img4{
-    margin: 3px 4px;
-    height: 140px;
-    width: 135px;
+    margin: 3px 3px;
+    height: 160px;
+    width: 200px;
+    background-image: url(ImageProductTesting/airpod2-1.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
+
+.product-img5{
+    margin: 3px 4px;
+    height: 160px;
+    width: 200px;
+    background-image: url(ImageProductTesting/airpod2-2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-img6{
+    margin: 3px 3px;
+    height: 160px;
+    width: 200px;
+    background-image: url(ImageProductTesting/airpod2-3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .product-name, .product-price{
     margin-left: 5px;
     margin-bottom: 5px;
@@ -373,7 +398,7 @@ nav{
 
 /* Responsive for product image */
 @media screen and (min-width: 463px) {
-    .product-img1, .product-img2, .product-img3{
+    .product-img1, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6{
         height: 230px;
     }
     .product-container{
@@ -382,7 +407,7 @@ nav{
 }
 
 @media screen and (min-width: 669px) {
-    .product-img1, .product-img2, .product-img3{
+    .product-img1, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6{
         height: 230px;
         width: 300px;
     }
@@ -393,7 +418,7 @@ nav{
 }
 
 @media screen and (min-width: 969px) {
-    .product-img1, .product-img2, .product-img3{
+    .product-img1, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6{
         height: 230px;
         width: 400px;
     }
@@ -404,7 +429,7 @@ nav{
 }
 
 @media screen and (min-width: 1269px) {
-    .product-img1, .product-img2, .product-img3{
+    .product-img1, .product-img2, .product-img3, .product-img4, .product-img5, .product-img6{
         height: 405px;
         width: 390px;
     }
