@@ -6,8 +6,8 @@ function auto_scroll() {
         firstinterval += 2;
         parent = document.querySelector('.inside-content-1');
         parent.style.left = "-" + firstinterval + "px";
-        if (!(firstinterval % 130)) {
-            setTimeout(auto_scroll, 1000);
+        if (!(firstinterval % 200)) {
+            setTimeout(auto_scroll, 3000);
             firstinterval = 0;
             var firstChild = parent.firstElementChild;
             parent.appendChild(firstChild);
@@ -23,8 +23,8 @@ function auto_scroll_1() {
         firstinterval += 2;
         parent = document.querySelector('.inside-content-2');
         parent.style.left = "-" + firstinterval + "px";
-        if (!(firstinterval % 130)) {
-            setTimeout(auto_scroll_1, 1000);
+        if (!(firstinterval % 200)) {
+            setTimeout(auto_scroll_1, 3000);
             firstinterval = 0;
             var firstChild = parent.firstElementChild;
             parent.appendChild(firstChild);

@@ -138,6 +138,7 @@ nav{
     align-items: center;
     margin-bottom: 10px;
     border-radius: 15px;
+    overflow: hidden;
 }
 
 .inside-content a:hover{
@@ -162,6 +163,7 @@ nav{
 }
 
 .inside-content-1{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -169,19 +171,11 @@ nav{
 }
 
 .inside-content-2{
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 5px;
-}
-
-.child {
-    width: 150px;
-    height: 150px;
-    padding-top: 35px;
-    float: left;
-    text-align: center;
-    font-size: 60px;
 }
 
 
