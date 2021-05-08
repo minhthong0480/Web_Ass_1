@@ -54,3 +54,5 @@ document.getElementById("inside-content-1-id").addEventListener("mouseout", auto
 document.getElementById("inside-content-2-id").addEventListener("mouseover", stop_scroll_feature_product_fnc);
 
 document.getElementById("inside-content-2-id").addEventListener("mouseout", auto_scroll_1);
+
+//Reference: https://stackoverflow.com/questions/37130851/implement-plain-javascript-carousel-without-plugin
