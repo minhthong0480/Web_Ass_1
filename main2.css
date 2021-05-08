@@ -106,6 +106,7 @@ nav{
 .container_box{
     display: flex;
     justify-content: center;
+    
 }
 
 .Heading-container {
@@ -128,6 +129,7 @@ nav{
     margin-bottom: 10px;
     border-radius: 15px;
     overflow: hidden;
+    
 }
 
 .Heading-container-2 {
@@ -238,6 +240,19 @@ nav{
 @media screen and (max-width: 390px) {
     .Heading-container-2{
         height: 935px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container_box{
+        display: flex;
+    }
+    #techstore_img {
+        width: 100px;
+        
+    }
+    #mrsimplestore_img{
+        width: 110px;
     }
 }
 
