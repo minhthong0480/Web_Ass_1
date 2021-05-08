@@ -1194,11 +1194,13 @@ input{
 .Order{
     width: 70px;
     height: 30px;
+    text-align: center;
 }
 
 .continue_shopping{
     width: 150px;
     height: 30px;
+    text-align: center;
 }
 
 /*  */
