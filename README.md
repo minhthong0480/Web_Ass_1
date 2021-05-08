@@ -20,4 +20,4 @@ Tech images and information are from https://www.nguyenkim.com/
 
 Logos for mall and stores are from https://unsplash.com/
 
-This is just a demo (only using html and css) of a true website. 
+Reference for auto scroll new product and feature product: https://stackoverflow.com/questions/37130851/implement-plain-javascript-carousel-without-plugin
