@@ -98,28 +98,4 @@
 }
 /*   */
 
- /*CSS of cookie consent message NEW01*/
- #cookie {
-    background-color: rgb(143, 143, 143);
-    border: black;
-    border-width: 1px;
-    position: fixed;
-    display: none;
-    bottom: 0;
-    padding: 0 30%;
-    font-size: 16px;
-}
-#cookie.unclick {
-    display: block;
-}
-#cookie button{
-    margin: 2% 3% ;
-}
-#cookie a {
-    text-decoration: underline;
-    color: black;
-}
-#agreement{
-    background-color: rgb(255, 255, 0);
-}
-/*   */
+ 
