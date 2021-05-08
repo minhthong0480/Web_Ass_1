@@ -8,7 +8,9 @@ There are some issues when we try to merge our work into one repository. So we d
 
 So to avoid confusion about contribution on github and ensure that we have fair contributions, we send you the tasks of each member.
 
-Task of each member: https://bitly.com.vn/k13vrr
+Task HTML+CSS of each member: https://bitly.com.vn/k13vrr
+
+Task JAva Script: https://bitly.com.vn/isl1av
 
 Description: Our mall website is include 1 mall page and 2 store pages: 1 store is about technology product, another is about clothes. 
 
