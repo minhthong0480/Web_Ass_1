@@ -1,5 +1,3 @@
-
-
 /*CSS for overlay page NEW03*/
 .overlay {
     position: fixed; 
@@ -37,9 +35,7 @@
 .personal_info:first-child {
     padding-top: 15%;
 }
-.member_photo {
-    border-radius: 20%;
-}
+
 /*   */
 
 /* CSS for Browse store*/
