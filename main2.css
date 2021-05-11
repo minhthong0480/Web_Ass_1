@@ -77,12 +77,12 @@ nav{
 /* CSS for footer */
 .nav-bottom {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     min-height: 60px;
     min-width: 320px;
     background-color: gray;
-    font-family: 'Poppins', sans-serif;
+    
 }
 
 .nav-bottom ul{
@@ -90,23 +90,36 @@ nav{
     list-style-type: none;
 }
 .nav-bottom ul li a{ 
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 10px;
     color: black;
     text-transform: uppercase;
+    text-align: center;
 }
 
 /*  */
 
 /* CSS for the content section  */
+.store-image-center{
+    position: relative;
+    height: 450px;
+    min-width: 320px;
+    background-image: url(images/Mall-center.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .container{
     margin: 20px 20px;
 }
 
 .container_box{
     display: flex;
-    justify-content: center;
-    
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .Heading-container {
@@ -225,6 +238,12 @@ nav{
     }
 }
 
+@media screen and (max-width: 520px) {
+    .Heading-container{
+        height: 400px;
+    }
+}
+
 @media screen and (max-width: 450px) {
     .Heading-container-1{
         height: 850px;
@@ -240,19 +259,6 @@ nav{
 @media screen and (max-width: 390px) {
     .Heading-container-2{
         height: 935px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .container_box{
-        display: flex;
-    }
-    #techstore_img {
-        width: 100px;
-        
-    }
-    #mrsimplestore_img{
-        width: 110px;
     }
 }
 
@@ -668,10 +674,6 @@ nav{
 /*  */
 
 
-
-
-
-
 /* Responsive contact us page*/
 
 @media screen and (max-width:767px){
@@ -723,13 +725,6 @@ nav{
 }
 /*  */
 
-/* Responsive regis account page */
-
-@media screen and (max-width:767px){
-    .regis_button input{
-        display: block;
-    }
-}
 
 /*  */
 /* Responsive for your profile page */
@@ -948,14 +943,20 @@ th, td {
 
 .form_box input[type="text"], input[type="password"]{
     width: 200px;
-    height: 30px;
+    height: 40px;
     border: none;
     border-bottom: 1px solid;
-    outline:none;
+    outline: none;
     border-radius: 5px;
 }
 
+.form_box .username input::placeholder{
+    padding: 10px;
+}
 
+.form_box .password input::placeholder{
+    padding: 10px;
+}
 
 .form_box .link_to_another_page{
     text-decoration: none;
@@ -967,23 +968,33 @@ th, td {
 .form_box a:hover{
     color:orangered;
 }
+
+/* Responsible for Login page */
+@media screen and (max-width: 350px) {
+    .form_box{
+        width: 300px;
+    }
+}
 /*  */
 
 /* forgot pass */
 
 .forgotpass{
+    
     display: block;
     margin-bottom: 20px;
-    width: 100%;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
+    display: flex;
+    min-width: 300px;
+
 }
 
 .fpass{
     background: darkgray;
-    width: 40%;
+    width: 80%;
     padding: 15px 20px;
+    margin: 5px 30px;
     border-radius: 10px;
 }
 
@@ -991,6 +1002,8 @@ th, td {
     text-align: center;
     margin: 20px;
     padding: 0px;
+    min-width: 300px;
+
 }
 
 .fpass h3{
@@ -1022,6 +1035,7 @@ th, td {
 
 /* register page */
 
+
 .profile-pic{
     width:100px;
     height: 100px;
@@ -1043,22 +1057,25 @@ label{
 
 #register_form{
     border: 1px solid;
-    width: fit-content;
-    
-    margin-bottom: 20px;
+    margin: 10px 20px;
     padding: 20px;
     border-radius: 10px;
+    min-width: 290px;
 }
 
 .regis_button{
-    margin-left: 150px;
+    margin-top: 20px;
+    margin-left: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 input{
-    padding:5px 30px;
     margin: 10px;
-    align-self: left;
     border-radius: 5px;
+    width: 100px;
+    height: 30px;
 }
 
 .profile-pic{
@@ -1112,17 +1129,18 @@ input{
 
 
 /*CSS for Coppyright, Term of servise, Privacy policy*/
-#coppyright li, #ToS li, #privacy_policy li {
-    margin: 0 20px;
+#copyright{
+    margin: 5px 10px;
 }
-#coppyright > div, #ToS > div, #privacy_policy > div {
+
+#copyright li, #ToS li, #privacy_policy li {
+    margin: 10px 20px;
+}
+#copyright > div, #ToS > div, #privacy_policy > div {
     margin-inline-start: 2%;
 }
-#coppyright,#ToS,#privacy_policy {
-    font-size: 20px;
-}
-@media screen and (max-width: 903px) {
-
+#copyright,#ToS,#privacy_policy {
+    font-size: 17px;
 }
 
 @media screen and (max-width: 733px) {
@@ -1227,6 +1245,7 @@ input{
     background-color: rgba(0,0,0,0.5);
 }
 #more_info {
+    border-radius: 10px;
     margin: 10% 25%;
     padding: 0.5% 3%;
     background-color: rgb(255, 255, 255);
@@ -1256,7 +1275,7 @@ input{
     padding-top: 15%;
 }
 .member_photo {
-    border-radius: 20%;
+    border-radius: 15px;
 }
 /*   */
 
