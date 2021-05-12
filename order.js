@@ -13,9 +13,8 @@ function removeItems(event){
     //button's function when clicking the remove button
     //Note that the ".parentElement" to get the parent element of the remove button
     var buttonClicked = event.target 
-    updateCartTotal()
     buttonClicked.parentElement.parentElement.remove()
-    
+    updateCartTotal()
 }
 
 // FUNCTION TO CALCULATE THE TOTAL PRICE AND PRICE BASED ON QUANTITIES
