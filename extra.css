@@ -80,9 +80,9 @@
 
 }
 .product_image {
-    border-radius: 15px;
-    height: 280px;
-    width: 280px;
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
 }
 /*   */
 
