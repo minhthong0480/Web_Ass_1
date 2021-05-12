@@ -40,7 +40,7 @@
 
 /* CSS for Browse store*/
 .store  div {
-    padding: 3px 20%;
+    margin: 10px 50px;
     padding-right: 0;
     display: flex;
     flex-wrap: wrap;
@@ -48,12 +48,8 @@
 }
 .store span{
     width: 300px;
-    text-justify: left;
 }
-.store span:nth-child(2) {
-    padding: 0 0;
-    padding-top: 13%;
-}
+
 .store {
     text-decoration: none;
     color:  black;
@@ -84,9 +80,9 @@
 
 }
 .product_image {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    border-radius: 15px;
+    height: 280px;
+    width: 280px;
 }
 /*   */
 
