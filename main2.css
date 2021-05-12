@@ -1329,9 +1329,9 @@ input{
 
 }
 .product_image {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    border-radius: 20px;
+    height: 280px;
+    width: 280px;
 }
 /*   */
 
