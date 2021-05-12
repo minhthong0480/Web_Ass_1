@@ -374,13 +374,12 @@ nav{
 }
 
 .small-product-button{
-    margin-top: 10px;
+    
     margin-left: 5px;
     display: flex;
 }
 
 .quantity{
-    margin-top: 3px;
     margin-left: 5px;
 }
 
@@ -848,9 +847,16 @@ th, td {
 .enter_name{margin-bottom: 10px;}
 .phone{margin-bottom: 10px;}
 .email{margin-bottom: 10px;}
-.contact_method{margin-bottom: 10px;}
+.contact_method{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 300px;
+}
 .contact_purpose{margin-bottom: 10px;}
 .contact_day{margin-bottom: 10px;}
+
 
 .message{
     width: 100%;
@@ -861,6 +867,10 @@ th, td {
 
 #messages_box{
     margin-top:10px;
+    margin-left: 10px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 .contact_method {padding-bottom: 10px;}
@@ -1023,7 +1033,6 @@ th, td {
 }
 
 .fpass_button input[type="submit"]{
-    padding: 8px 4px;
     border-radius: 5px;
 }
 
@@ -1072,10 +1081,10 @@ label{
 }
 
 input{
-    margin: 10px;
+    margin-bottom: 4px;
     border-radius: 5px;
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
 }
 
 .profile-pic{
@@ -1300,9 +1309,9 @@ input{
     color:  black;
 }
 .store_image {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
+    border-radius: 15px;
+    height: 280px;
+    width: 280px;
 }
 /*   */
 
@@ -1359,3 +1368,4 @@ input{
 #agreement{
     background-color: rgb(255, 255, 0);
 }
+/* End of NEW01*  */
