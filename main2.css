@@ -702,8 +702,8 @@ nav{
     }
     .input_box_2 input[type]{
         display:block;
-        
     }
+    
 }
 /* Responsive fee page*/
 @media screen and (max-width:767px){
@@ -900,6 +900,15 @@ th, td {
     padding: 10px 10px;
     width: 100px;
 }
+
+.submit_button:hover{
+    background-color: orangered;
+}
+
+.reset_button:hover{
+    background-color: orangered;
+}
+
 /*  */
 
 /* login */
