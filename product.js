@@ -80,7 +80,7 @@ function addItemtoCart(nameProduct, priceProduct, productImage){
         price: priceProduct,
         image: productImage,
     }
-    window.localStorage.setItem("cart", [item])
+    window.localStorage.setItem("cart", JSON.stringify([item]))
     // var rowProduct =  document.createElement('div')
     // rowProduct.innerHTML = nameProduct
     // var order = document.getElementsByClassName("order")[0]
