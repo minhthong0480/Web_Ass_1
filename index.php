@@ -1,3 +1,22 @@
+<?php 
+require('db_connect.php');
+function fetchdata($query_string){
+    global $db;
+    $statement = $db->prepare($query_string);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    $statement->closeCursor();
+    return $result;
+}
+$product_img = ['Acer-Aspire-5.jpg', 'adidas-jacket.jpg', 'adidas-shoe.jpg', 'Airpod-2.jpg', 'app-store.png', 'blank-profile.png', 'buy-1.jpg', 'buy-2.jpg', 'buy-3.jpg', 'Canon-OES-300D.jpg', 'category-1.jpg', 'category-2.jpg', 'category-3.jpg', 'clark-street-mercantile.jpg', 'clothe-store.jpg', 'Dell-inspiron.jpg', 'electronic-store.jpg', 'exclusive.png', 'Fossil-clock.jpg', 'gallery-2.jpg', 'gallery-3.jpg', 'gallery-4.jpg', 'image1.png', 'iPhone-12.jpg', 'LG-smart-TV.jpg', 'logo-coca-cola.png', 'logo-godrej.png', 'logo-oppo.png', 'logo-paypal.png', 'logo-philips.png', 'logo-white.png', 'Macbook-air.jpg', 'Mall-center.jpeg', 'menu.png', "Nhan's photo.jpg", 'Nike-jogger-pant.jpg', 'Panasoic-smart-TV.jpg', 'Plantronics.jpg', 'play-store.png', 'product-1.jpg', 'product-10.jpg', 'product-12.jpg', 'product-2.jpg', 'product-3.jpg', 'product-4.jpg', 'product-5.jpg', 'product-6.jpg', 'product-7.jpg', 'Puma-black-shirt.jpg', 'Puma-classic-shirt.jpg', 'Puma-T-shirt.jpg', 'Redmi-note-10.jpg', 'Roadster-classic-clock.jpg', 'Roadster-shoe.jpg', 'Roadster-sport-shoe.jpg', 'simple-logo.jpg', 'Sony-alpha-ILCE.jpg', 'Sport-band.png', 'tech-logo.jpg', 'Tech-store.jpg', 'Thong_photo.jpg', 'X-red-shoe.jpg', 'X-shock.jpg', 'X-training-shoe.jpg', 'X-walking-shoe.jpg'];
+$new_products = fetchdata('SELECT * FROM `products` ORDER BY created_time DESC LIMIT 10'); 
+
+$new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT 10');
+// $feature_products = 
+// $feature_stores =
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +66,11 @@
         </nav>
     </header>
 
+    <div class="store-image-center"></div>
+
     <div class="container">
+        
+
         <!-- Div for new stories -->
         <div class="Heading-container">
             <div class="container-font">
@@ -59,7 +82,7 @@
                     <div class="detail-content">
                     
                         <div class="content-img" >
-                            <img src="images/electronic-store.jpg" width="203px" alt="electronic-store-image" id = "techstore_img">
+                            <img src="images/electronic-store.jpg" width="187px" alt="electronic-store-image" id = "techstore_img">
                         </div>
 
                         <div class="content-text">
@@ -82,7 +105,7 @@
                     
                     </div>
                 </a>
-            
+
             </div>
         </div>
 
@@ -109,6 +132,23 @@
                     
                     </div>
                 </a>
+
+                <?php foreach($new_products as $new_product) : ?>
+                    <a href="ProductPage.html" class="scroll_product">
+                        <div class="detail-content">
+                    
+                            <div class="content-img">
+                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Iphone 12 Pro Max">
+                            </div>
+
+                            <div class="content-text">
+                                <span><?php echo $new_product['name'] ?></span>
+                                <span><?php echo $new_product['price']?> USD</span>
+                            </div>
+                        
+                        </div>
+                    </a>
+                <?php endforeach; ?>
 
                 <a href="ProductPage2.html" class="scroll_product">
                     <div class="detail-content">
@@ -324,7 +364,7 @@
     <footer>
         <div class="nav-bottom">
             <ul>
-                <li><a href="coppyright.html">Coppyright</a></li>
+                <li><a href="copyright.html">Copyright</a></li>
                 <li><a href="term_of_service.html">Term of Service</a></li>
                 <li><a href="privacy_policy.html">Privacy Policy</a></li>
             </ul>

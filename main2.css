@@ -374,13 +374,12 @@ nav{
 }
 
 .small-product-button{
-    margin-top: 10px;
+    
     margin-left: 5px;
     display: flex;
 }
 
 .quantity{
-    margin-top: 3px;
     margin-left: 5px;
 }
 
@@ -703,8 +702,8 @@ nav{
     }
     .input_box_2 input[type]{
         display:block;
-        
     }
+    
 }
 /* Responsive fee page*/
 @media screen and (max-width:767px){
@@ -848,9 +847,16 @@ th, td {
 .enter_name{margin-bottom: 10px;}
 .phone{margin-bottom: 10px;}
 .email{margin-bottom: 10px;}
-.contact_method{margin-bottom: 10px;}
+.contact_method{
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    width: 300px;
+}
 .contact_purpose{margin-bottom: 10px;}
 .contact_day{margin-bottom: 10px;}
+
 
 .message{
     width: 100%;
@@ -861,6 +867,10 @@ th, td {
 
 #messages_box{
     margin-top:10px;
+    margin-left: 10px;
+    width: 300px;
+    height: 150px;
+    border-radius: 10px;
 }
 
 .contact_method {padding-bottom: 10px;}
@@ -890,6 +900,15 @@ th, td {
     padding: 10px 10px;
     width: 100px;
 }
+
+.submit_button:hover{
+    background-color: orangered;
+}
+
+.reset_button:hover{
+    background-color: orangered;
+}
+
 /*  */
 
 /* login */
@@ -1023,7 +1042,6 @@ th, td {
 }
 
 .fpass_button input[type="submit"]{
-    padding: 8px 4px;
     border-radius: 5px;
 }
 
@@ -1072,10 +1090,10 @@ label{
 }
 
 input{
-    margin: 10px;
+    margin-bottom: 4px;
     border-radius: 5px;
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 40px;
 }
 
 .profile-pic{
@@ -1280,59 +1298,20 @@ input{
 /*   */
 
 /* CSS for Browse store*/
-.store  div {
-    padding: 3px 20%;
-    padding-right: 0;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 20;
-}
-.store span{
-    width: 300px;
-    text-justify: left;
-}
-.store span:nth-child(2) {
-    padding: 0 0;
-    padding-top: 13%;
-}
 .store {
     text-decoration: none;
     color:  black;
 }
 .store_image {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px;
-}
-/*   */
-
-/*CSS for browse product*/
-.product  div {
-    padding: 3px 20%;
-    padding-right: 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-.product span{
-    width: 300px;
-    text-justify: left;
-}
-.product span div {
-    padding: 0 0;
-}
-.product span div:first-child {
-    padding-top: 15%;
-}
-.product {
-    text-decoration: none;
-    color:  black;
-
-}
-.product_image {
-    border-radius: 20px;
+    border-radius: 15px;
     height: 280px;
-    width: 280px;
+    width: 320px;
 }
+.browse-name-store{
+    margin-left: 30px;
+    margin-top: 100px;
+}
+
 /*   */
 
 /*CSS of cookie consent message NEW01*/
