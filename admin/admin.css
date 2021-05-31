@@ -1,0 +1,89 @@
+* {
+    margin: 4px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CSS for install.php */
+.install_header {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    height: 80px;
+    min-width: 300px;
+}
+
+.install_header h1{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.install_body{
+    border: 1px solid black;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(238, 116, 45);
+    border-radius: 5px;
+    min-width: 300px;
+}
+
+@media screen and (max-width: 742px) {
+    .install_header{
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 527px) {
+    .install_header{
+        height: 145px;
+    }
+}
+
+@media screen and (max-width: 401px) {
+    .install_header{
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .install_header{
+        height: 180px;
+    }
+    .install_body{
+        height: 180px;
+    }
+}
+/*  */
+
+/* CSS for Login */
+.login_header {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    height: 100px;
+    min-width: 300px;
+}
+/*  */
+
+/* CSS for Dashboard */
+.dashboard_mini_container{
+    border: 1px solid black;
+    background-color: rgb(255, 136, 0);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    min-width: 300px;
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.dashboard_mini_container div:hover{
+    color: white;
+}
+/*  */

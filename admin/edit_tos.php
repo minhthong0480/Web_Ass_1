@@ -2,9 +2,9 @@
     session_start();
 
     // Check if the method is post and the button has a string of NULL
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['copy_right'])){
-        // Open the coppyright.html with the right of editing it
-        $handle = fopen("../copyright.html", 'w+');
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['tos'])){
+        // Open the term_of_service.html with the right of editing it
+        $handle = fopen("../term_of_service.html", 'w+');
         // Write the file html with the new content in the text area
         fwrite($handle, $_POST['html_content']);
         // Closing the file after finishing editing 
@@ -25,20 +25,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Copyright</title>
+    <title>Edit ToS</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
-    <h1>Edit Copyright </h1>
+    <h1>Edit Term of Service </h1>
     <form action="" method="POST">
-        <textarea name="html_content" cols="110" rows="70" >
+        <textarea name="html_content" cols="110" rows="80" >
             <?php
-                echo file_get_contents('../copyright.html');    
+                echo file_get_contents('../term_of_service.html');    
             ?>
 
         </textarea> <br>
-        <button type="submit" name="copy_right" style="height: 35px; width: 180px;">Save CoppyRight</button> <br>
+        <button type="submit" name="tos" style="height: 35px; width: 180px;">Save ToS</button> <br>
         <button type="submit" name="dash_board" style="height: 35px; width: 180px;">Back to Dashboard</button>
     </form>
 </body>
