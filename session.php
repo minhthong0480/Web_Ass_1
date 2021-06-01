@@ -4,7 +4,7 @@
    
    $user_check = $_SESSION['login_user'];
    
-   $ses_sql = mysqli_query($conn,"select * from ủe where usersPhone = '$user_check' ");
+   $ses_sql = mysqli_query($conn,"select * from users where usersPhone = '$user_check' ");
    
    $row = mysqli_fetch_array($ses_sql,MYSQLI_ASSOC);
    
