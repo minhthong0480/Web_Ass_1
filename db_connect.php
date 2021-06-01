@@ -1,6 +1,6 @@
 <?php 
 define('DB_USER', 'root');
-define('DB_PASSWORD', 'matkhaulamatkhau');
+define('DB_PASSWORD', '');
 
 
 $dsn = 'mysql:host=localhost; dbname=shopping_mall';

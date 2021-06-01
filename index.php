@@ -1,19 +1,19 @@
 <?php 
-require('db_connect.php');
-function fetchdata($query_string){
-    global $db;
-    $statement = $db->prepare($query_string);
-    $statement->execute();
-    $result = $statement->fetchAll();
-    $statement->closeCursor();
-    return $result;
-}
-$product_img = ['Acer-Aspire-5.jpg', 'adidas-jacket.jpg', 'adidas-shoe.jpg', 'Airpod-2.jpg', 'buy-1.jpg', 'buy-2.jpg', 'buy-3.jpg', 'Canon-OES-300D.jpg', 'category-1.jpg', 'category-2.jpg', 'category-3.jpg', 'clark-street-mercantile.jpg', 'clothe-store.jpg', 'Dell-inspiron.jpg', 'electronic-store.jpg', 'exclusive.png', 'Fossil-clock.jpg', 'gallery-2.jpg', 'gallery-3.jpg', 'gallery-4.jpg', 'iPhone-12.jpg', 'LG-smart-TV.jpg', 'logo-white.png', 'Macbook-air.jpg', 'Mall-center.jpeg', 'menu.png', "Nhan's photo.jpg", 'Nike-jogger-pant.jpg', 'Panasoic-smart-TV.jpg', 'Plantronics.jpg', 'play-store.png', 'product-1.jpg', 'product-10.jpg', 'product-12.jpg', 'product-2.jpg', 'product-3.jpg', 'product-4.jpg', 'product-5.jpg', 'product-6.jpg', 'product-7.jpg', 'Puma-black-shirt.jpg', 'Puma-classic-shirt.jpg', 'Puma-T-shirt.jpg', 'Redmi-note-10.jpg', 'Roadster-classic-clock.jpg', 'Roadster-shoe.jpg', 'Roadster-sport-shoe.jpg', 'Sony-alpha-ILCE.jpg', 'Sport-band.png', 'X-red-shoe.jpg', 'X-shock.jpg', 'X-training-shoe.jpg', 'X-walking-shoe.jpg'];
-$new_products = fetchdata('SELECT * FROM `products` ORDER BY created_time DESC LIMIT 10'); 
+    require('db_connect.php');
+    function fetchdata($query_string){
+        global $db;
+        $statement = $db->prepare($query_string);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    }
+    $product_img = ['adidas-shoe.jpg', 'Sport-band.png', 'Puma-T-shirt.jpg', 'iPhone-12.jpg', 'Dell-inspiron.jpg', 'Panasoic-smart-TV.jpg', 'LG-smart-TV.jpg', 'Redmi-note-10.jpg', 'Plantronics.jpg', 'Sony-alpha-ILCE.jpg', 'Puma-T-shirt.jpg'];
+    $new_products = fetchdata('SELECT * FROM `products` ORDER BY created_time DESC LIMIT 10'); 
 
-$new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT 10');
-// $feature_products = 
-// $feature_stores =
+    $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT 10');
+    // $feature_products = 
+    // $feature_stores =
 
 ?>
 
@@ -71,7 +71,7 @@ $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT
     <div class="container">
         
 
-        <!-- Div for new stories -->
+        <!-- Div for new stores -->
         <div class="Heading-container">
             <div class="container-font">
                 <h3>New Stores</h3>
@@ -110,10 +110,10 @@ $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT
         </div>
 
 
-        <!-- Div for new product -->
+        <!-- Div for new products -->
         <div class="Heading-container-1">
             <div class="container-font">
-                <h3>New Product</h3>
+                <h3>New Products</h3>
             </div>
 
             <div class="inside-content-1" id = "inside-content-1-id">
@@ -138,7 +138,7 @@ $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT
                         <div class="detail-content">
                     
                             <div class="content-img">
-                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Iphone 12 Pro Max">
+                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="130px" alt="Product-Image">
                             </div>
 
                             <div class="content-text">
