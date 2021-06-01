@@ -1,3 +1,23 @@
+<?php 
+    require('db_connect.php');
+
+    // function to fetch the data from the database
+    function fetchdata($query_string){
+        global $db;
+        $statement = $db->prepare($query_string);
+        $statement->execute();
+        $result = $statement->fetchAll();
+        $statement->closeCursor();
+        return $result;
+    }
+    // An array of string to select the photo randomly for the product sections
+    $product_img = ['Sport-band.png', 'Fossil-clock.jpg', 'Puma-T-shirt.jpg', 'Roadster-classic-clock.jpg', 'Fossil-clock.jpg', 'Roadster-shoe.jpg', 'adidas-jacket.jpg', 'adidas-shoe.jpg', 'X-shock.jpg'];
+    $product_href = ['ProductPage.html', 'ProductPage2.html'];
+    // Fetch the data from database
+    $tech_new_products = fetchdata('SELECT * FROM `products` WHERE store_id = 21 ORDER BY `created_time` DESC LIMIT 5');
+    $tech_featured_products = fetchdata('SELECT * FROM `products` WHERE store_id = 21');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +44,7 @@
                 <img src="images/simple-logo.jpg" alt="Simple Store Logo" width="70px" class="simple-logo">
             </div>
             <div class="nav-text">
-                <h1>MR.SIMPLE</h1>
+                <h1>AMAZON.COM 2</h1>
             </div>
             <div class="nav-links-container">
                 <input type="checkbox" id="menu-icon">
@@ -34,7 +54,7 @@
                 </div>
                 
                 <ul class="nav-links">
-                    <li><a href="MRSimpleStore.html">Home</a></li>
+                    <li><a href="MRSimpleStore.php">Home</a></li>
                     <li><a href="About_us.html">About Us</a></li>
                     <li><a href="browse_product_clothe.html">Product</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -122,6 +142,25 @@
                         
                         </div>
                     </a>
+
+                    <!-- PHP for displaying 5 new products due to created time-->
+                    <?php foreach($tech_new_products as $tech_new_product) : ?>
+                        <a href="<?php echo $product_href[array_rand($product_href)] ?>" class="scroll_product">
+                            <div class="detail-content">
+                        
+                                <div class="content-img">
+                                    <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Product-Image">
+                                </div>
+
+                                <div class="content-text">
+                                    <span><?php echo $tech_new_product['name']?></span>
+                                    <span><?php echo $tech_new_product['price']?> USD</span>
+                                </div>
+                            
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
+
                 </div>
             </div>
     
@@ -195,21 +234,41 @@
                         
                         </div>
                     </a>
+                    
+                    <!-- PHP for displaying featured products of the stores-->
+                    <?php foreach($tech_featured_products as $tech_featured_product) : ?>
+                        <a href="<?php echo $product_href[array_rand($product_href)] ?>" class="scroll_product">
+                            <div class="detail-content">
+                        
+                                <div class="content-img">
+                                    <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Product-Image">
+                                </div>
+
+                                <div class="content-text">
+                                    <span><?php echo $tech_featured_product['name']?></span>
+                                    <span><?php echo $tech_featured_product['price']?> USD</span>
+                                </div>
+                            
+                            </div>
+                        </a>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
 
     </div>    
 <script src="JavaScript/cookie_consent.js"></script>
+
+    <footer>
+        <div class="nav-bottom">
+            <ul>
+                <li><a href="copyright.html">Copyright</a></li>
+                <li><a href="term_of_service.html">Term of Service</a></li>
+                <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 
-<footer>
-    <div class="nav-bottom">
-        <ul>
-            <li><a href="copyright.html">Copyright</a></li>
-            <li><a href="term_of_service.html">Term of Service</a></li>
-            <li><a href="privacy_policy.html">Privacy Policy</a></li>
-        </ul>
-    </div>
-</footer>
+
 </html>
