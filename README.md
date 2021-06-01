@@ -1,5 +1,9 @@
 # Web_Assignment_1
 
+Important Note: One of our teammate, Nguyen Vo Thien Nhan, did not contribute anything for our PHP assignment, so we, Nguyen Hoang Minh Thong and Tran Thien Van, dicide to remove him from our group in this last assignment. We also sent you an email to clarify that he did not contribute anything for our assignment.
+
+Please check this file for tasks that we shared: https://bitly.com.vn/isl1av
+
 Github repo link: https://github.com/minhthong0480/Web_Ass_1
 
 Link website: https://minhthong0480.github.io/Web_Ass_1/
