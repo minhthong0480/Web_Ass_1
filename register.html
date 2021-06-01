@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +38,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="About_us.html">About Us</a></li>
                     <li><a href="fee_table.html">Fees</a></li>
-                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="login_user.php">My Account</a></li>
                     <li><a href="browse_store.html">Browse</a></li>
                     <li><a href="faqs.html">FAQs</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -48,28 +50,28 @@
     <div class="register">
         <div class="title">Register Your Account</div>
         <div id="register_form">
-            <form method="post">
+            <form action = "regis_data.php" method="post" name = 'register_form'>
                 <div>
                     <label for="phone">Enter your phone here: </label>
-                    <input type="tel" placeholder='090-123-4567' id="regis_phone" style="height: 30px; width: 200px;">
+                    <input type="tel" name = 'phone' placeholder='090-123-4567' id="regis_phone" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="email">Enter your email here: </label>
-                    <input type="email" placeholder="contactus@example.com" autocomplete='off' id="regis_email" style="height: 30px; width: 200px;">
+                    <input type="email" name = 'email' placeholder="contactus@example.com" autocomplete='off' id="regis_email" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="password" >Enter your password:</label>
-                    <input type="text" maxlength="100" placeholder="Password" id="regis_password" style="height: 30px; width: 200px;">
+                    <input type="password" name = 'pass' maxlength="100" placeholder="Password" id="regis_password" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="password" >Comfirm your password:</label>
-                    <input type="text" maxlength="100" placeholder="Re-enter Password" id = "regis_repass" style="height: 30px; width: 200px;">
+                    <input type="password" name = 'retypepass' maxlength="100" placeholder="Re-enter Password" id = "regis_repass" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
@@ -81,36 +83,36 @@
 
                 <div>
                     <label for="first_name" >Enter your First name:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your First Name" id="first_name" style="height: 30px; width: 200px;">
+                    <input type="text" name = 'firstname' maxlength="100" placeholder="Enter Your First Name" id="first_name" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="last_name" >Enter your Last name:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your Last Name" id="last_name" style="height: 30px; width: 200px;">
+                    <input type="text" name = 'lastname' maxlength="100" placeholder="Enter Your Last Name" id="last_name" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="address" >Enter your Address:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your Address" id="address" style="height: 30px; width: 200px;">
+                    <input type="text" name = 'address' maxlength="100" placeholder="Enter Your Address" id="address" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div>
                     <label for="city" >Your City:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your City" id="city" style="height: 30px; width: 200px;">
+                    <input type="text" name = 'city' maxlength="100" placeholder="Enter Your City" id="city" style="height: 30px; width: 200px;">
                     <br>
                 </div>
                 
                 <div>
                     <label for="zipcode" >Choose your Zipcode:</label>
-                    <input type="text" maxlength="100" placeholder="Enter Your Zipcode" id="zipcode" style="height: 30px; width: 200px;">
+                    <input type="text" name = 'zipcode' maxlength="100" placeholder="Enter Your Zipcode" id="zipcode" style="height: 30px; width: 200px;">
                     <br>
                 </div>
 
                 <div class="country">
-                    <form method="POST">
+                    
                         <label for="country">Choose Your Country</label>
                             <select name="country" id="country" style="height: 30px; width: 200px; margin-left: 10px;">
                                 <option value="selected">Please select</option>
@@ -125,10 +127,10 @@
                                 <option value="FR">France</option>
                             </select>
                         <br>
-                    </form> 
+                     
                 </div>
 
-                <div class="account_type">
+                <!-- <div class="account_type">
                     <label>Choose Your Type of Account:</label>
                     <br>
                     <input type="radio" name="type_of_account" id="store_owner"/>
@@ -140,16 +142,16 @@
                     <div id="store_owner_account_field">
                         <div class="business_name">
                             <label for="business-name" >Business Name:</label>
-                            <input type="text" maxlength="100" placeholder="Business Name" required>
+                            <input type="text" name = "business_name" maxlength="100" placeholder="Business Name" required>
                             <br>
                         </div>
                         <div class="store_name">
                             <label for="store_name" >Store Name:</label>
-                            <input type="text" maxlength="100" placeholder="Enter Your Store Name" required>
+                            <input type="text" name = "store_name" maxlength="100" placeholder="Enter Your Store Name" required>
                             <br>
                         </div>
                         <div class="store_category">
-                            <form method="post">
+                            
                                 <label for="store_category">Choose Your Store Category</label>
                                 <select name="store_category">
                                     <option value="selected">Please select</option>
@@ -164,14 +166,16 @@
                                     <option value="Toy stores">Toy stores</option>
                                     <option value="Specialty stores">Specialty stores</option>
                                 </select>
-                            </form>
+                            
                         </div>
                     </div>         
-                </div>
+                </div> -->
+                
             
                 <div class="regis_button">
-                    <input type="submit" value="Send" id = "regis_submit_button">
-                    <input type="reset" value="Reset">
+                    <input type="submit" name = "Submit" value="Send" id = "regis_submit_button" onclick="validate1()">
+                    
+                    <input type="reset" value="Reset" id = "regis_reset_button">
                 </div>
             </form>
         </div>

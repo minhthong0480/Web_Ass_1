@@ -1089,6 +1089,16 @@ label{
     justify-content: space-evenly;
 }
 
+#regis_submit_button:hover{
+    background-color: orangered;
+}
+
+
+
+#regis_reset_button:hover{
+    background-color: orangered;
+}
+
 input{
     margin-bottom: 4px;
     border-radius: 5px;

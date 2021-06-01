@@ -1,3 +1,36 @@
+<?php
+    include("config_db.php");
+    session_start();
+    
+            
+    if (isset($_POST['login'])) {
+        if(!empty($_POST['username']) && !empty($_POST['password'])) {
+        
+        $myusername = mysqli_escape_string($conn,$_POST['username']);
+
+        $mypassword = mysqli_escape_string($conn,$_POST['password']);
+        $hash = password_hash($mypassword, PASSWORD_DEFAULT);
+        $sql = "SELECT * FROM users WHERE usersPhone = '$myusername' or usersEmail = '$myusername' and usersPass = '$mypassword'";
+        $result = mysqli_query($conn,$sql);
+        // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        // $row = mysqli_fetch_assoc($result)
+        
+        $count = mysqli_num_rows($result);
+
+        if($count == 1) {
+            while($row = mysqli_fetch_assoc($result)) {
+                $_SESSION['login_user'] = $row["usersPhone"];
+            }
+            header("location: profile.php");
+         }
+         
+        }
+        $status = 'Your Login information is invalid';
+    }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +42,7 @@
     <link rel="stylesheet" href="main2.css">
 </head>
 <body>
+
     <div id="cookie">
         <div>I use cookies</div>
         <div>My website uses cookies necessary for its basic funtions. By continuing using, you consent to my uses of cookies and other technologies.</div>
@@ -36,7 +70,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="About_us.html">About Us</a></li>
                     <li><a href="fee_table.html">Fees</a></li>
-                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="login_user.php">My Account</a></li>
                     <li><a href="browse_store.html">Browse</a></li>
                     <li><a href="faqs.html">FAQs</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -48,20 +82,20 @@
     <div class="login">
         <h2>Log In Here</h2>
         <div class="form_box">
-            <form method="POST">
+            <form method="POST" action = "">
                 <div class="username">
                     <label>Username</label>
-                    <input type="text" placeholder="Phone or Email">
+                    <input type="text" name="username" placeholder="Phone or Email">
                 </div>
                 <div class="password">
                     <label>Password</label>
-                    <input type="password" placeholder="Enter Password">
+                    <input type="password" name="password" placeholder="Enter Password">
                     
                 </div>
                 <div class="login_button">
-                        <form method="get" action="google.com.vn">
-                            <a href="profile.html" target="_self"><input type="button" value="Log In"></a>
-                        </form>
+                        
+                <input type="submit" name = "login" value="Log In"></a>
+                        
                 </div>
                 <div>
                     <a href="forgot_pass.html" class="link_to_another_page">Forgot Password?</a>
@@ -71,6 +105,11 @@
                 </div>
             </form>
         </div>  
+<?php
+if(isset($status)){
+    echo "<h3 class=\"error\">$status</h3>";
+}
+?>
     </div>
 
     <footer>

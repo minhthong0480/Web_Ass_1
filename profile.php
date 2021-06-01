@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('config_db.php');
+if(!isset($_SESSION['login_user']))
+    header('Location: login_user.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,7 +44,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="About_us.html">About Us</a></li>
                     <li><a href="fee_table.html">Fees</a></li>
-                    <li><a href="login.html">My Account</a></li>
+                    <li><a href="login_user.php">My Account</a></li>
                     <li><a href="browse_store.html">Browse</a></li>
                     <li><a href="faqs.html">FAQs</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -61,10 +69,16 @@
         
         <div class="row">
             <div class="fullname_profile">
-                <h4>Fullname</h4>
+                <h4>First Name</h4>
             </div>
             <div class="fullname_infor">
-                John Smith
+            <p type="text" id = "fname_infor"></p>
+            </div>
+            <div class="fullname_profile">
+                <h4>Last Name</h4>
+            </div>
+            <div class="fullname_infor">
+            <p type="text" id = "lname_infor"></p>
             </div>
         </div>
 
@@ -98,7 +112,7 @@
                 <h4>Email</h4>
             </div>
             <div class="email_infor">
-                demo_profile@gmail.com
+            <p type="text" id = "emails_infor"></p>
             </div>
         </div>
         
@@ -106,8 +120,8 @@
             <div class="phone_profile">
                 <h4>Phone</h4>
             </div>
-            <div class="phone_infor">
-                0919123456
+            <div class="phone_infor" >
+            <p type="text" id = "phoneNum"></p>
             </div>
         </div>
         
@@ -116,10 +130,15 @@
                 <h4>Address</h4>
             </div>
             <div class="address_infor">
-                3809 Cinnamon Lane, San Antonio
+            <p type="text" id = "address_infor"></p>
             </div>
+            <a href="logout_user.php"><button name="signout" id="signout_button">Sign Out</button></a>
+            
         </div>
+        
+        
     </div>
+    
 
     <footer>
         <div class="nav-bottom">
@@ -133,3 +152,33 @@
 <script src="JavaScript/cookie_consent.js"></script>
 </body>
 </html>
+<?php
+// session_start();
+include('config_db.php');
+$sql =  "Select * from users where usersPhone=" . $_SESSION['login_user'];
+$result = mysqli_query($conn, $sql);
+if(mysqli_num_rows($result) > 0)
+{
+    while($row = mysqli_fetch_assoc($result)) {
+        echo '<script type="text/javascript">' .
+        'document.getElementById("phoneNum").innerHTML = ' . '"' . $row["usersPhone"] . '"' . ';' .
+        '</script>';
+
+        echo '<script type="text/javascript">' .
+        'document.getElementById("emails_infor").innerHTML = ' . '"' . $row["usersEmail"] . '"' . ';' .
+        '</script>';
+
+        echo '<script type="text/javascript">' .
+        'document.getElementById("fname_infor").innerHTML = ' . '"' . $row["usersFirstname"] . '"' . ';' .
+        '</script>';
+
+        echo '<script type="text/javascript">' .
+        'document.getElementById("lname_infor").innerHTML = ' . '"' . $row["usersLastname"] . '"' . ';' .
+        '</script>';
+
+        echo '<script type="text/javascript">' .
+        'document.getElementById("address_infor").innerHTML = ' . '"' . $row["usersAddress"] . '"' . ';' .
+        '</script>';
+    }       
+}
+?>

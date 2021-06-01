@@ -1,7 +1,11 @@
 /* Javascript for register */
+
+
 function qs(selector){
     return document.querySelector(selector);
 }
+
+
 
 function validate1() {
     results = {
@@ -17,14 +21,24 @@ function validate1() {
     };
 
     for (let index in results) {
-      if (results[index]) {
-        alert("Congratulation!!! Your form has been sent successfully");
-        return true;
-      }
+      if (!results[index])
+        return false;
     }
-    return false;
-  }
 
+    // var phoneNum = qs("#regis_phone");
+    // alert(phoneNum);
+    // var emails = qs("#regis_email");
+    // var pwd = qs("#regis_password");
+    // var repwd = qs("#regis_repass");
+    // var query = "phone=" + phoneNum + "&email=" + emails + "&pass=" + pwd + "&repwd=" + repwd;
+    // alert(query);
+    var xhttp = new XMLHttpRequest();
+    xhttp.open('POST', "regis_data.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhttp.send();
+}
+    
+ 
 function validate_email(){
     var e = qs("#regis_email");
     vali_email = e.value;
@@ -139,8 +153,8 @@ function validate_email(){
   }
   
   btn1 = qs("#regis_submit_button");
-  btn1.addEventListener("click",validate1);
-  
+  // btn1.addEventListener("click",validate1);
+
   /*
   btn1.addEventListener("click",validateEmail);
   btn1.addEventListener("click",validatePhone);
@@ -151,4 +165,3 @@ function validate_email(){
   btn1.addEventListener("click",validateAddress);
   btn1.addEventListener("click",validateCity);
   */
-  /* */
