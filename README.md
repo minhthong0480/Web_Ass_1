@@ -21,3 +21,13 @@ Tech images and information are from https://www.nguyenkim.com/
 Logos for mall and stores are from https://unsplash.com/
 
 Reference for auto scroll new product and feature product: https://stackoverflow.com/questions/37130851/implement-plain-javascript-carousel-without-plugin
+
+Reference for login and register with sql: 
+
+      https://www.tutorialspoint.com/php/php_mysql_login.htm
+      
+      https://www.tutorialspoint.com/php/php_login_example.htm
+      
+      https://www.geeksforgeeks.org/how-to-display-logged-in-user-information-in-php/
+      
+
