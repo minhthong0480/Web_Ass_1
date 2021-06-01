@@ -1,5 +1,7 @@
 <?php 
     require('db_connect.php');
+
+    // function to fetch the data from the database
     function fetchdata($query_string){
         global $db;
         $statement = $db->prepare($query_string);
@@ -8,12 +10,28 @@
         $statement->closeCursor();
         return $result;
     }
-    $product_img = ['adidas-shoe.jpg', 'Sport-band.png', 'Puma-T-shirt.jpg', 'iPhone-12.jpg', 'Dell-inspiron.jpg', 'Panasoic-smart-TV.jpg', 'LG-smart-TV.jpg', 'Redmi-note-10.jpg', 'Plantronics.jpg', 'Sony-alpha-ILCE.jpg', 'Puma-T-shirt.jpg'];
-    $new_products = fetchdata('SELECT * FROM `products` ORDER BY created_time DESC LIMIT 10'); 
 
+    // An array of string to select the photo randomly for the product sections
+    $product_img = ['adidas-shoe.jpg', 'Sport-band.png', 'Puma-T-shirt.jpg', 'iPhone-12.jpg', 'Dell-inspiron.jpg', 'Panasoic-smart-TV.jpg', 'LG-smart-TV.jpg', 'Redmi-note-10.jpg', 'Plantronics.jpg', 'Sony-alpha-ILCE.jpg', 'Puma-T-shirt.jpg'];
+    
+    // An array of string to select the photo randomly for the store sections
+    $store_img = ['electronic-store.jpg', 'clothe-store.jpg'];
+
+    // An array of string to select the html page for store and product
+    $product_href = ['ProductPage.html', 'ProductPage2.html'];
+    $store_href = ['TechStore.html', 'MRSimpleStore.html'];
+    
+    // Select 10 stores from the newest time
     $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT 10');
-    // $feature_products = 
-    // $feature_stores =
+
+    // Select 10 products from the newest time
+    $new_products = fetchdata('SELECT * FROM `products` ORDER BY created_time DESC LIMIT 10'); 
+    
+    // Select 10 stores
+    $feature_stores = fetchdata('SELECT * FROM `stores` LIMIT 10');
+    
+    // Select 10 products
+    $feature_products = fetchdata('SELECT * FROM `products` LIMIT 10'); 
 
 ?>
 
@@ -82,7 +100,7 @@
                     <div class="detail-content">
                     
                         <div class="content-img" >
-                            <img src="images/electronic-store.jpg" width="187px" alt="electronic-store-image" id = "techstore_img">
+                            <img src="images/electronic-store.jpg" width="190px" alt="electronic-store-image" id = "techstore_img">
                         </div>
 
                         <div class="content-text">
@@ -105,6 +123,23 @@
                     
                     </div>
                 </a>
+
+                <!-- Display the new store -->
+                <?php foreach($new_stores as $new_store) : ?>
+                    <a href="<?php echo $store_href[array_rand($store_href)] ?>" class="">
+                        <div class="detail-content" >
+                        
+                            <div class="content-img">
+                                <img src="images/<?php echo $store_img[array_rand($store_img)] ?>" width="200px" alt="clothe-store-image" id = "mrsimplestore_img">
+                            </div>
+
+                            <div class="content-text">
+                                <span><?php echo $new_store['name'] ?></span>
+                            </div>
+                        
+                        </div>
+                    </a>
+                <?php endforeach; ?>
 
             </div>
         </div>
@@ -132,13 +167,14 @@
                     
                     </div>
                 </a>
-
+                
+                <!-- Display the new products -->
                 <?php foreach($new_products as $new_product) : ?>
-                    <a href="ProductPage.html" class="scroll_product">
+                    <a href="<?php echo $product_href[array_rand($product_href)] ?>" class="scroll_product">
                         <div class="detail-content">
                     
                             <div class="content-img">
-                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="130px" alt="Product-Image">
+                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Product-Image">
                             </div>
 
                             <div class="content-text">
@@ -149,22 +185,6 @@
                         </div>
                     </a>
                 <?php endforeach; ?>
-
-                <a href="ProductPage2.html" class="scroll_product">
-                    <div class="detail-content">
-                    
-                        <div class="content-img">
-                            <img src="images/adidas-shoe.jpg" width="160px" height="140px" alt="Adidas_Shoe">
-                        </div>
-
-                        <div class="content-text">
-                            <span>Adidas Shoe</span>
-                            <span>1.750.000 VND</span>
-                        </div>
-                        
-                    
-                    </div>
-                </a>
 
                 <a href="ProductPage.html" class="scroll_product">
                     <div class="detail-content">
@@ -252,6 +272,23 @@
                     
                     </div>
                 </a>
+                
+                <!-- Display the featured stores from the database -->
+                <?php foreach($feature_stores as $feature_store) : ?>
+                    <a href="<?php echo $store_href[array_rand($store_href)] ?>" class="">
+                        <div class="detail-content" >
+                        
+                            <div class="content-img">
+                                <img src="images/<?php echo $store_img[array_rand($store_img)] ?>" width="200px" alt="store-image" id = "mrsimplestore_img">
+                            </div>
+
+                            <div class="content-text">
+                                <span><?php echo $feature_store['name'] ?></span>
+                            </div>
+                        
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
 
@@ -357,6 +394,24 @@
                     
                     </div>
                 </a>
+
+                <!-- Display the featured products from the database -->
+                <?php foreach($feature_products as $feature_product) : ?>
+                    <a href="<?php echo $product_href[array_rand($product_href)] ?>" class="scroll_product">
+                        <div class="detail-content">
+                    
+                            <div class="content-img">
+                                <img src="images/<?php echo $product_img[array_rand($product_img)] ?>" width="160px" alt="Product-Image">
+                            </div>
+
+                            <div class="content-text">
+                                <span><?php echo $feature_product['name'] ?></span>
+                                <span><?php echo $feature_product['price']?> USD</span>
+                            </div>
+                        
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
