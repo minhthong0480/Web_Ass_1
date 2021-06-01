@@ -1,7 +1,8 @@
 # Web_Assignment_1
 
 Important Note:
-One of our teammate, Nguyen Vo Thien Nhan, did not contribute anything for our PHP assignment. At first, he took responsibility for doing task 6,8,9. But, he did not deliver any tasks. In deadline day 1st June, he still didn't push any code to our github, he also didn't answer us in group chat. So we, Nguyen Hoang Minh Thong and Tran Thien Van, dicide to remove him from our group in this last assignment since he did not contribute anything for our team. We also sent you an email with evidences to clarify.
+     Group 31
+One of our teammate, Nguyen Vo Thien Nhan, did not contribute anything for our PHP assignment. At first, he took responsibility for doing task 6,8,9 (he chose to work with these tasks). But, he did not deliver any tasks or update his work process to us. In deadline day, 1st June, Nhan still didn't push any code to our github, he also didn't answer us in group chat. So we, Nguyen Hoang Minh Thong and Tran Thien Van, dicide to remove Nhan from our group in this last assignment since he did not contribute anything for our team. We also sent you an email with evidences to clarify.
 
 Please check this file for tasks that we shared: https://bitly.com.vn/isl1av
 
