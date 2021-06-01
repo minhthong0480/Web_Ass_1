@@ -125,7 +125,6 @@ nav{
 .Heading-container {
     border: 2px solid black;
     min-width: 280px;
-    height: 245px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -136,7 +135,6 @@ nav{
 .Heading-container-1 {
     border: 2px solid black;
     min-width: 280px;
-    height: 245px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -148,7 +146,6 @@ nav{
 .Heading-container-2 {
     border: 2px solid black;
     min-width: 280px;
-    height: 265px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -218,49 +215,6 @@ nav{
     color: black;
 }
 
-/* Responsive for the main page */
-
-@media screen and (max-width: 920px) {
-    .Heading-container-1{
-        height: 450px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .Heading-container-2{
-        height: 490px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .Heading-container-1{
-        height: 650px;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .Heading-container{
-        height: 400px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .Heading-container-1{
-        height: 850px;
-    }
-}
-
-@media screen and (max-width: 430px) {
-    .Heading-container-2{
-        height: 710px;
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .Heading-container-2{
-        height: 935px;
-    }
-}
 
 /*  */
 
