@@ -410,7 +410,6 @@ nav{
 
 .first-shop-container{
     width: 100%;
-    height: 920px;
     min-width: 210px;
 }
 
@@ -442,7 +441,6 @@ nav{
 .store-container-1 {
     border: 2px solid black;
     min-width: 280px;
-    height: 265px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -452,83 +450,17 @@ nav{
 .store-container-2 {
     border: 2px solid black;
     min-width: 280px;
-    height: 265px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     border-radius: 15px;
 }
 
-/* Responsive for Simple-store */
-@media screen and (max-width: 749px) {
-    .store-container-2{
-        height: 490px;
-    }
-
-    .first-shop-container{
-        height: 1160px;
-    }
-}
-
-
-@media screen and (max-width: 730px) {
-    .store-container-1{
-        height: 490px;
-    }
-
-    .first-shop-container{
-        height: 1370px;
-    }
-}
-
-@media screen and (max-width: 420px) {
-    .store-container-2{
-        height: 720px;
-    }
-
-    .first-shop-container{
-        height: 1610px;
-    }
-}
-
-
-@media screen and (max-width: 410px) {
-    .store-container-1{
-        height: 720px;
-    }
-
-    .first-shop-container{
-        height: 1840px;
-    }
-}
-
-@media screen and (max-width: 379px) {
-    .store-container-2{
-        height: 940px;
-    }
-    .slogun{
-        font-size: 25px;
-    }
-    .first-shop-container{
-        height: 2050px;
-    }
-}
-
-
-@media screen and (max-width: 370px) {
-    .store-container-1{
-        height: 940px;
-    }
-
-    .first-shop-container{
-        height: 2280px;
-    }
-}
+/*  */
 
 /* CSS for the TECH Store */
 .second-shop-container{
     width: 100%;
-    height: 980px;
     min-width: 210px;
 }
 
@@ -545,7 +477,6 @@ nav{
 .store-container-3 {
     border: 2px solid black;
     min-width: 280px;
-    height: 265px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
@@ -555,73 +486,10 @@ nav{
 .store-container-4 {
     border: 2px solid black;
     min-width: 280px;
-    height: 265px;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
     border-radius: 15px;
-}
-
-/* Responsive for the Tech Store */
-@media screen and (max-width: 850px) {
-    .store-container-3{
-        height: 490px;
-    }
-    .second-shop-container{
-        height: 1200px;
-    }
-}
-
-@media screen and (max-width: 810px) {
-    .store-container-4{
-        height: 450px;
-    }
-    .second-shop-container{
-        height: 1380px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .store-container-4{
-        height: 490px;
-    }
-    .second-shop-container{
-        height: 1420px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .store-container-3{
-        height: 950px;
-    }
-    .store-container-4{
-        height: 710px;
-    }
-    .second-shop-container{
-        height: 2100px;
-    }
-}
-
-@media screen and (max-width: 410px) {
-    .store-container-4{
-        height: 900px;
-    }
-    .second-shop-container{
-        height: 2290px;
-    }
-}
-
-
-@media screen and (max-width: 379px) {
-    .store-container-2{
-        height: 940px;
-    }
-    .slogun{
-        font-size: 25px;
-    }
-    .first-shop-container{
-        height: 2050px;
-    }
 }
 
 /*  */

@@ -19,7 +19,7 @@
 
     // An array of string to select the html page for store and product
     $product_href = ['ProductPage.html', 'ProductPage2.html'];
-    $store_href = ['TechStore.html', 'MRSimpleStore.html'];
+    $store_href = ['TechStore.php', 'MRSimpleStore.php'];
     
     // Select 10 stores from the newest time
     $new_stores = fetchdata('SELECT * FROM `stores` ORDER BY created_time DESC LIMIT 10');
@@ -96,7 +96,7 @@
             </div>
             <div class = "container_box">
             
-                <a href="TechStore.html" class="">
+                <a href="TechStore.php" class="">
                     <div class="detail-content">
                     
                         <div class="content-img" >
@@ -259,7 +259,7 @@
             </div>
 
             <div class="inside-content">
-                <a href="TechStore.html" class="">
+                <a href="TechStore.php" class="">
                     <div class="detail-content">
                     
                         <div class="content-img">
